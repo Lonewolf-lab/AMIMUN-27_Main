@@ -1,0 +1,43 @@
+{
+  "contract": "1.0.0",
+  "flavor": "core",
+  "milestone": null,
+  "phases": [
+    {
+      "number": "1",
+      "name": "Legacy Quarantine & Next.js Bootstrap",
+      "status": "complete"
+    },
+    {
+      "number": "2",
+      "name": "Design System Tokens & Kinetic Animation Engine",
+      "status": "complete"
+    },
+    {
+      "number": "3",
+      "name": "Core Navigation & Layout Shell",
+      "status": "complete"
+    },
+    {
+      "number": "4",
+      "name": "Homepage & Portfolio Showcase",
+      "status": "complete"
+    },
+    {
+      "number": "5",
+      "name": "Informational Pages & Consultation Form",
+      "status": "complete"
+    },
+    {
+      "number": "6",
+      "name": "SEO, Performance & Production Polish",
+      "status": "complete"
+    }
+  ],
+  "next": {
+    "command": "/gsd-new-milestone",
+    "label": "Start a new milestone",
+    "reason": "All phases complete — start a new milestone"
+  },
+  "updated_at": "2026-09-17T08:39:20.219Z"
+}
