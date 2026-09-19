@@ -1,0 +1,298 @@
+.pageContainer {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  padding-bottom: var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Attractive, Clean Hero Section */
+.heroSection {
+  width: 100%;
+  padding-top: calc(var(--navigation-height) + var(--space-2xl));
+  padding-bottom: var(--space-2xl);
+  margin-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--color-border);
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.heroInner {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 clamp(16px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-xs);
+}
+
+.heroTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--2);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0c388d;
+  font-weight: 600;
+  padding: 6px 14px;
+  background: rgba(12, 56, 141, 0.06);
+  border-radius: 999px;
+}
+
+.title {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin: 0;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: #0c388d;
+}
+
+.heroSubtitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  color: var(--color-text-secondary);
+  max-width: 54ch;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Outer layout wrapper - constrained to the main section so sticky sidebar stops before the footer */
+.layoutWrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0 clamp(16px, 3vw, 48px);
+}
+
+/* Left Sidebar - Sticky inside layoutWrapper so it stops exactly above the footer */
+.sidebarNav {
+  position: sticky;
+  top: calc(var(--navigation-height) + 40px);
+  align-self: flex-start;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 8px 30px rgba(12, 56, 141, 0.08);
+  width: 230px;
+  flex-shrink: 0;
+  margin-right: -230px; /* Offset width so cards grid is centered to the screen */
+  transform: translateX(-15px);
+}
+
+.navButton {
+  background: transparent;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 10px;
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navButton:hover {
+  color: #0c388d;
+  background: rgba(12, 56, 141, 0.05);
+}
+
+.navButtonActive {
+  background: #0c388d !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(12, 56, 141, 0.2);
+}
+
+/* Main Grid Section - Strict Screen Centering */
+.gridSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.cardGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xl);
+  width: 100%;
+  max-width: 1200px;
+  align-items: flex-start;
+}
+
+/* Card Container with Flap Dropdown */
+.card {
+  position: relative;
+  width: 280px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
+  cursor: pointer;
+}
+
+/* Broader & bigger card sizing for key patrons */
+.cardProminent {
+  width: 350px;
+}
+
+.card:hover {
+  border-color: #0c388d;
+  box-shadow: 0 16px 36px rgba(12, 56, 141, 0.12);
+}
+
+/* Photo container */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #f0f3f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrapperProminent {
+  height: 430px;
+}
+
+.memberPhoto {
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.portraitPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.monogram {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-5);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #0c388d;
+  opacity: 0.45;
+}
+
+/* Flap extension dropdown on hover */
+.cardFlap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #ffffff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.card:hover .cardFlap {
+  grid-template-rows: 1fr;
+}
+
+.flapInner {
+  overflow: hidden;
+}
+
+.flapContent {
+  padding: 16px 18px 20px;
+  border-top: 2px solid #0c388d;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease 0.1s, transform 0.25s ease 0.1s;
+}
+
+.card:hover .flapContent {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.memberName {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #0c388d;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.memberRole {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  color: var(--color-text-secondary);
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .layoutWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebarNav {
+    position: static;
+    transform: none;
+    margin-right: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: var(--space-xl);
+  }
+
+  .navButton {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .card, .cardProminent {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .imageWrapper, .imageWrapperProminent {
+    height: 350px;
+  }
+}
