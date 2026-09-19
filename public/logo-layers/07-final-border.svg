@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 900 1600">
+  <title>SRN Layer 7 — Final Outer Border</title>
+  
+<circle cx="450" cy="783" r="431" fill="none" stroke="#020A3C" stroke-width="3"/>
+<circle cx="450" cy="783" r="428" fill="none" stroke="#07166A" stroke-width="1.5" opacity="0.8"/>
+
+</svg>
