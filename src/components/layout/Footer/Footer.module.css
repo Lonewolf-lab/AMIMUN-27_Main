@@ -1,0 +1,230 @@
+.footer {
+  position: relative;
+  background-color: var(--color-background-dark, #121212);
+  color: #ffffff;
+  padding: var(--space-3xl) var(--space-gutter) var(--space-xl);
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.container {
+  max-width: var(--max-container-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  position: relative;
+  z-index: 2;
+}
+
+.topSection {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: flex-start;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.dotHeading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #4caf50;
+}
+
+.emblemLink {
+  display: inline-block;
+  color: #ffffff;
+  transition: opacity 0.2s;
+}
+
+.emblemLink:hover {
+  opacity: 0.8;
+}
+
+.brandDescription {
+  font-size: var(--step-0);
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 320px;
+  line-height: 1.5;
+}
+
+.navSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: var(--step-0);
+  transition: color 0.2s, transform 0.2s;
+  display: inline-block;
+}
+
+.navLink:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.socialList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: var(--space-m);
+}
+
+.socialLink {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: var(--step--1);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: #ffffff;
+}
+
+.projectCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+
+.projectCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--variable-radius);
+  padding: var(--space-m);
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  transition: background-color 0.3s var(--ease-out), border-color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+
+.projectCard:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.projectCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.projectCardTitle {
+  font-size: var(--step-1);
+  font-weight: 400;
+  margin: 0;
+}
+
+.projectCardYear {
+  font-size: var(--step--1);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.projectCardDesc {
+  font-size: var(--step--1);
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.giantLogoWrapper {
+  width: 100%;
+  overflow: hidden;
+  margin: var(--space-xl) 0 var(--space-s);
+  opacity: 0.12;
+  transition: opacity 0.4s ease;
+}
+
+.giantLogoWrapper:hover {
+  opacity: 0.2;
+}
+
+.giantLogoSvg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.suburbSection {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: var(--space-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.suburbHeader {
+  font-size: var(--step--2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.suburbTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.suburbTag {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: var(--step--1);
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.02em;
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: var(--space-m);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-m);
+  font-size: var(--step--2);
+  color: rgba(255, 255, 255, 0.45);
+}
+
+@media (max-width: 900px) {
+  .topSection {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}

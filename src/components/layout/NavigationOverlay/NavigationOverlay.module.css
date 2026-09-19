@@ -1,0 +1,92 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 98;
+  background-color: #0c388d;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1), visibility 0.5s;
+  padding: var(--space-xl) var(--space-gutter);
+  overflow: hidden;
+}
+.visible { opacity: 1; visibility: visible; pointer-events: all; }
+
+/* ── Main list: always perfectly centred ────────── */
+.mainList {
+  list-style: none; padding: 0; margin: 0 0 var(--space-2xl);
+  display: flex; flex-direction: column;
+  align-items: center; gap: var(--space-m);
+  text-align: center;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity   0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+/* slide left when sub open */
+.mainSlid { transform: translateX(-180px); opacity: 0.35; }
+
+.menuItem { overflow: clip; }
+.menuLink {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: var(--step-5); color: #ffffff; text-decoration: none;
+  letter-spacing: -0.03em; background: none; border: none;
+  cursor: pointer; font-family: inherit; padding: 0;
+  transform: translateY(110%);
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.2s;
+}
+.visible .menuLink { transform: translateY(0%); }
+.menuLink:hover, .menuLinkActive { opacity: 0.6; }
+.arrow { font-size: 0.5em; display: inline-block; transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
+.arrowOpen { transform: rotate(90deg); }
+
+/* ── Sub lists: fixed centre, slide in from right ── */
+.subList {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(80px, -50%);
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column;
+  align-items: flex-start; gap: var(--space-m);
+  opacity: 0; pointer-events: none;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity   0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.subVisible {
+  transform: translate(20px, -50%);
+  opacity: 1; pointer-events: all;
+}
+.subItem { overflow: clip; }
+.subLink {
+  display: inline-block; font-size: var(--step-3);
+  color: rgba(255,255,255,0.75); text-decoration: none;
+  letter-spacing: -0.02em;
+  transform: translateX(24px); opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.3s ease, color 0.2s;
+}
+.subVisible .subLink { transform: translateX(0); opacity: 1; }
+.subLink:hover { color: #ffffff; }
+
+/* ── CTAs ──────────────────────────────────────── */
+.contactSection {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: var(--space-s); border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: var(--space-l); width: 100%; max-width: 700px;
+}
+.contactItem { overflow: clip; }
+.contactLink {
+  display: inline-flex; align-items: center;
+  padding: 10px 24px; border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #ffffff; text-decoration: none;
+  font-size: var(--step-0); letter-spacing: 0.02em;
+  transform: translateY(110%);
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+              background-color 0.2s, border-color 0.2s;
+}
+.visible .contactLink { transform: translateY(0%); }
+.contactLink:hover { background-color: rgba(255,255,255,0.12); border-color: #ffffff; }

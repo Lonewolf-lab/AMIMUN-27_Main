@@ -1,0 +1,145 @@
+.svgLogo {
+  display: block;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.piece {
+  will-change: transform;
+  transform-box: fill-box;
+  transition: transform 0.25s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.piece0 {
+  transform-origin: top left;
+}
+
+.piece1 {
+  transform-origin: top right;
+}
+
+.piece2 {
+  transform-origin: top right;
+}
+
+.piece3 {
+  transform-origin: top left;
+}
+
+.piece4 {
+  transform-origin: top right;
+}
+
+.piece5 {
+  transform-origin: bottom left;
+}
+
+.piece6 {
+  transform-origin: bottom right;
+}
+
+/* Keyframe assembly for initial load */
+@keyframes pieceScaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes pieceScaleXIn {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pieceScaleYIn {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.animating .piece0 {
+  animation: pieceScaleIn 0.25s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation-delay: var(--delay-0, 0s);
+  transform: scale(0);
+}
+
+.animating .piece1 {
+  animation: pieceScaleIn 0.25s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation-delay: var(--delay-1, 0.25s);
+  transform: scale(0);
+}
+
+.animating .piece2 {
+  animation: pieceScaleIn 0.25s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation-delay: var(--delay-2, 0.5s);
+  transform: scale(0);
+}
+
+.animating .piece3 {
+  animation: pieceScaleXIn 0.25s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation-delay: var(--delay-3, 0.5s);
+  transform: scaleX(0);
+}
+
+.animating .piece4 {
+  animation: pieceScaleIn 0.25s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation-delay: var(--delay-4, 0.75s);
+  transform: scale(0);
+}
+
+.animating .piece5 {
+  animation: pieceScaleYIn 0.25s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation-delay: var(--delay-5, 0.75s);
+  transform: scaleY(0);
+}
+
+.animating .piece6 {
+  animation: pieceScaleYIn 0.25s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation-delay: var(--delay-6, 1s);
+  transform: scaleY(0);
+}
+
+/* Hover collapse ripple */
+.hovering .piece0 {
+  transform: scale(0);
+  transition-delay: 0.15s;
+}
+
+.hovering .piece1 {
+  transform: scale(0);
+  transition-delay: 0.1s;
+}
+
+.hovering .piece2 {
+  transform: scale(0);
+  transition-delay: 0.05s;
+}
+
+.hovering .piece3 {
+  transform: scaleX(0);
+  transition-delay: 0.1s;
+}
+
+.hovering .piece4 {
+  transform: scale(0);
+  transition-delay: 0.05s;
+}
+
+.hovering .piece5 {
+  transform: scaleY(0);
+  transition-delay: 0.05s;
+}
+
+.hovering .piece6 {
+  transform: scaleY(0);
+  transition-delay: 0s;
+}

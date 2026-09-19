@@ -1,0 +1,40 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background-color: var(--c-blue, #0c388d);
+  pointer-events: all;
+  overflow: hidden;
+  clip-path: inset(0 0 0% 0);
+  transition: clip-path 0.65s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.preloaderWiping {
+  clip-path: inset(0 0 100% 0);
+}
+
+/* Logo sits centred during assembly */
+.logoContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transform-origin: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform, top, left, opacity;
+}
+
+/* When moving: transition kicks in, inline style drives the destination */
+.logoMoving {
+  transition:
+    transform  0.75s cubic-bezier(0.76, 0, 0.24, 1),
+    top        0.75s cubic-bezier(0.76, 0, 0.24, 1),
+    left       0.75s cubic-bezier(0.76, 0, 0.24, 1),
+    opacity    0.35s ease-out;
+}
+
+.logoFadeOut {
+  opacity: 0;
+}
