@@ -1,0 +1,178 @@
+.hero {
+  position: relative;
+  background-color: var(--color-background);
+}
+
+/* Signature Blue Transition Overlay */
+.overlay {
+  pointer-events: none;
+  z-index: 30;
+  background-color: var(--c-blue, #0c388d);
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  height: 100lvh;
+  clip-path: inset(0 0 0% 0);
+  transition: clip-path 0.65s cubic-bezier(0.76, 0, 0.24, 1);
+  will-change: clip-path;
+}
+
+.overlayRevealed {
+  clip-path: inset(0 0 100% 0);
+}
+
+.overlayTopSpacing {
+  flex: 1;
+  display: grid;
+  place-items: end start;
+  padding-bottom: var(--space-m);
+}
+
+.overlayLogo {
+  margin-top: var(--space-m);
+  width: 100%;
+}
+
+.overlayLogo svg path {
+  fill: var(--c-white, #ffffff);
+}
+
+/* Sticky Main Hero Typography Layer */
+.contentGrid {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding-inline: var(--space-page-inline);
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.topSpacing {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: var(--space-m);
+}
+
+.logoWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.logoSvg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: translateY(100lvh);
+  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: transform;
+}
+
+.lettersRising .logoSvg {
+  transform: translateY(0);
+}
+
+/* Theme subheading above wordmark */
+.themeSubheading {
+  width: 100%;
+  text-align: center;
+  font-size: var(--step-1);
+  font-style: italic;
+  letter-spacing: 0.01em;
+  color: var(--color-text-body, #111111);
+  margin: 0;
+  padding-bottom: var(--space-xs);
+}
+
+/* Tagline below wordmark */
+.taglineCentered {
+  width: 100%;
+  text-align: center;
+  font-size: var(--step--1);
+  letter-spacing: -0.01em;
+  color: var(--color-text-body, #111111);
+  line-height: 1.5;
+  margin: 0;
+  padding-block: var(--space-xs);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+              transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: opacity, transform;
+}
+
+.subheading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: calc(var(--space-m) - 6px) var(--space-m);
+  font-size: var(--step--1);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-body, #111111);
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+              transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: opacity, transform;
+}
+
+.subheadingRevealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll wrapper creating distance to transition from half-size cropped to full screen */
+.videoSection {
+  position: relative;
+  z-index: 20;
+  height: 200svh; /* Scroll travel container */
+  margin-top: -10svh;
+}
+
+.videoStickyContainer {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.videoCard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  will-change: transform, clip-path, border-radius;
+  pointer-events: auto;
+}
+
+.mediaFigure {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.heroVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .subheading {
+    font-size: var(--step--2);
+  }
+}

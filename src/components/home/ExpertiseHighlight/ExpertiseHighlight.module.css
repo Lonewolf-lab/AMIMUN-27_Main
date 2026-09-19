@@ -1,0 +1,107 @@
+.section {
+  padding: var(--space-section-large) var(--space-gutter);
+  background-color: var(--color-background-elevated);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.container {
+  max-width: var(--max-container-width);
+  margin: 0 auto;
+}
+
+.intro {
+  margin-bottom: var(--space-2xl);
+  max-width: 800px;
+}
+
+.label {
+  color: var(--color-brand-primary);
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: var(--step--1);
+  font-weight: 500;
+}
+
+.heading {
+  font-size: var(--step-4);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-m);
+}
+
+.subheading {
+  font-size: var(--step-0);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.pillarCard {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-l);
+  border: 1px solid var(--color-border);
+  border-radius: var(--variable-radius);
+  background: var(--color-background-primary);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.pillarCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.pillarNumber {
+  font-size: var(--step-0);
+  color: var(--color-brand-primary);
+  font-family: monospace;
+  margin-bottom: var(--space-m);
+}
+
+.pillarTitle {
+  font-size: var(--step-2);
+  font-weight: 400;
+  margin-bottom: var(--space-s);
+  letter-spacing: -0.01em;
+}
+
+.pillarBody {
+  font-size: var(--step-0);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-m);
+}
+
+.pillarLink {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--step--1);
+  color: var(--color-brand-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pillarLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-l);
+  }
+}

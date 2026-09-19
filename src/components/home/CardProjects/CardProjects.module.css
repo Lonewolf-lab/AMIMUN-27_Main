@@ -1,0 +1,93 @@
+.section {
+  padding-inline: var(--space-page-inline);
+  padding-bottom: var(--space-section-large);
+  background-color: var(--color-background);
+}
+
+/* Layout 2: Featured Hero Single Card */
+.layout2Container {
+  display: flex;
+  justify-content: center;
+}
+
+.layout2Card {
+  width: 100%;
+  max-width: 720px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  group: "";
+}
+
+.layout2Media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 682 / 816;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* Layout 3: Asymmetric 3-Column Grid */
+.layout3Grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: end;
+}
+
+.layout3Card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.layout3Media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* Shared Card Text and Hover States */
+.cardText {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: var(--space-xs);
+  font-size: var(--step-0);
+  letter-spacing: -0.01em;
+}
+
+.cardHeading {
+  font-family: var(--font-family-headings);
+  font-size: var(--step-1);
+  margin: 0;
+  color: var(--color-text-body);
+}
+
+.cardDate {
+  font-size: var(--step--1);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.cardImage {
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.layout2Card:hover .cardImage,
+.layout3Card:hover .cardImage {
+  transform: scale(1.04);
+}
+
+@media (min-width: 900px) {
+  .layout3Grid {
+    grid-template-columns: 4fr 5fr 3fr;
+    gap: var(--space-l);
+  }
+
+  .layout3Grid .layout3Card:nth-child(2) {
+    margin-bottom: var(--space-2xl);
+  }
+}

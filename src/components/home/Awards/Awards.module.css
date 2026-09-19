@@ -1,0 +1,92 @@
+.section {
+  padding-top: var(--space-m);
+  padding-bottom: var(--space-section-large);
+  padding-inline: var(--space-page-inline);
+  background-color: var(--color-background);
+}
+
+.dotHeading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--step--1);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-body);
+  margin-bottom: var(--space-l);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-text-body);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 0;
+}
+
+.awardItem {
+  position: relative;
+  padding-block: var(--space-m);
+  transition: all 0.3s ease;
+}
+
+.awardItem:hover {
+  background-color: rgba(12, 56, 141, 0.03);
+}
+
+.awardInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding-inline: var(--space-xs);
+}
+
+.awardLeft {
+  font-family: var(--font-family-headings);
+  font-size: var(--step-1);
+  color: var(--color-text-body);
+  margin: 0;
+}
+
+.awardRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-m);
+  font-size: var(--step-0);
+  color: var(--color-text-secondary);
+}
+
+.awardDesc {
+  margin: 0;
+}
+
+.awardYear {
+  font-family: var(--font-family-headings);
+  font-size: var(--step-1);
+  color: var(--c-blue);
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (min-width: 900px) {
+  .awardInner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .awardLeft {
+    flex-basis: 40%;
+  }
+
+  .awardRight {
+    flex-basis: 60%;
+  }
+}

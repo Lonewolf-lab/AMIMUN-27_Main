@@ -1,0 +1,36 @@
+.statementSection {
+  padding: var(--space-section-large) var(--space-gutter);
+  max-width: var(--max-container-width);
+  margin: 0 auto;
+}
+
+.statementWrapper {
+  max-width: var(--content-max-width-wide);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
+.subText {
+  font-size: var(--step-1);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: var(--content-max-width);
+}
+
+.regionBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-s);
+}
+
+.badge {
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 16px;
+  background: var(--color-brand-primary-subtle);
+  border-radius: 9999px;
+  color: var(--color-brand-primary);
+}

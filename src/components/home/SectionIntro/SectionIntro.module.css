@@ -1,0 +1,129 @@
+.section {
+  padding-block: var(--space-section-large);
+  padding-inline: var(--space-page-inline);
+  background-color: var(--color-background);
+  position: relative;
+}
+
+.headingRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-m);
+  align-items: end;
+}
+
+.heading {
+  font-size: var(--step-5);
+  font-family: var(--font-family-headings);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  max-width: 16ch;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  margin-block: var(--space-l);
+}
+
+.contentRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-l);
+}
+
+.subheadingCol {
+  margin-bottom: var(--space-s);
+}
+
+.dotHeading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--step--1);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-body);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-text-body);
+}
+
+.bodyCol {
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: var(--color-text-body);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.bodyCol p {
+  margin: 0;
+}
+
+.ctaCol {
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--space-xs);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: calc(var(--space-s) - 2px) var(--space-l);
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  font-size: var(--step--1);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-body);
+  transition: all 0.3s ease;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  background-color: var(--color-text-body);
+  color: var(--color-background);
+  border-color: var(--color-text-body);
+}
+
+.imageWrapper {
+  margin-top: var(--space-2xl);
+  position: relative;
+  width: 100%;
+  aspect-ratio: 682 / 480;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.03);
+}
+
+@media (min-width: 900px) {
+  .headingRow {
+    grid-template-columns: 8fr 4fr;
+  }
+
+  .contentRow {
+    grid-template-columns: 3fr 6fr 3fr;
+  }
+
+  .imageWrapper {
+    aspect-ratio: 682 / 420;
+  }
+}

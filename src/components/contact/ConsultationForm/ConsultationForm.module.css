@@ -1,0 +1,215 @@
+.formContainer {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.sectionBlock {
+  margin-bottom: var(--space-2xl);
+}
+
+.sectionTitle {
+  font-size: var(--step-1);
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--color-text-primary);
+}
+
+.sectionSubtitle {
+  font-size: var(--step--1);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-m);
+}
+
+.pillGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: var(--step--1);
+  font-family: inherit;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill:hover {
+  border-color: #0c388d;
+  color: #0c388d;
+}
+
+.pillActive {
+  background: #0c388d;
+  border-color: #0c388d;
+  color: #ffffff;
+}
+
+.pillActive:hover {
+  background: #0c388d;
+  color: #ffffff;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-m);
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: var(--space-m);
+}
+
+.label {
+  font-size: var(--step--2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--color-background-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--variable-radius);
+  font-size: var(--step-0);
+  font-family: inherit;
+  color: var(--color-text-primary);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #0c388d;
+  box-shadow: 0 0 0 3px rgba(12, 56, 141, 0.1);
+}
+
+.textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.errorText {
+  font-size: var(--step--2);
+  color: #d32f2f;
+}
+
+.submitButton {
+  width: 100%;
+  background: #0c388d;
+  color: #ffffff;
+  padding: 18px 24px;
+  border-radius: 9999px;
+  border: none;
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  margin-top: var(--space-m);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.submitButton:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.successCard {
+  padding: var(--space-3xl) var(--space-2xl);
+  background: var(--color-background-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--variable-radius);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.successIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #0c388d;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: var(--space-m);
+}
+
+.successTitle {
+  font-size: var(--step-3);
+  font-weight: 400;
+  margin-bottom: var(--space-s);
+  letter-spacing: -0.01em;
+}
+
+.successBody {
+  font-size: var(--step-0);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 540px;
+  margin: 0 auto var(--space-xl);
+}
+
+.summaryBadgeList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: var(--space-xl);
+}
+
+.summaryBadge {
+  background: rgba(12, 56, 141, 0.08);
+  color: #0c388d;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: var(--step--2);
+  font-weight: 500;
+}
+
+.resetButton {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-size: var(--step--1);
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.resetButton:hover {
+  border-color: #0c388d;
+  color: #0c388d;
+}
+
+@media (max-width: 768px) {
+  .fieldRow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

@@ -1,0 +1,122 @@
+.section {
+  padding-block: var(--space-section-large);
+  padding-inline: var(--space-page-inline);
+  background-color: var(--color-background);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+/* Left Column */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.dotHeading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--step--1);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-body);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-text-body);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  margin-block: var(--space-m);
+}
+
+.description {
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: var(--color-text-body);
+}
+
+/* Right Column: Video Panels */
+.panelsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.videoCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.videoTitle {
+  font-family: var(--font-family-headings);
+  font-size: var(--step-0);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-xs);
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectLabel {
+  font-size: var(--step--1);
+  color: var(--color-text-secondary);
+}
+
+.videoPlayerWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #1a1918;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.videoPoster {
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.videoCard:hover .videoPoster {
+  transform: scale(1.03);
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: grid;
+  place-items: center;
+  color: var(--c-blue);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 2;
+}
+
+.videoCard:hover .playButton {
+  transform: translate(-50%, -50%) scale(1.1);
+  background-color: #ffffff;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 5fr 7fr;
+  }
+}

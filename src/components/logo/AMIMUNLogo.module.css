@@ -1,0 +1,95 @@
+/* ─── Container ──────────────────────────────────────────────── */
+.logoStack {
+  position: relative;
+  display: block;
+  aspect-ratio: 9 / 16;
+}
+
+/* ─── Base: all layers hidden, transition ready ──────────────── */
+.layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  will-change: opacity, transform, filter;
+}
+
+/* ─── Visible: land at natural position ─────────────────────── */
+.layerVisible {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) rotate(0deg) !important;
+  filter: blur(0px) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Each animation class owns its full transition so there's no
+   dependency on class order or inheritance conflicts.
+══════════════════════════════════════════════════════════════ */
+
+.animBgBloom {
+  transform: scale(0.88);
+  filter: blur(8px);
+  transition:
+    opacity   0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    filter    0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animFadeRise {
+  transform: translateY(28px) scale(0.97);
+  filter: blur(5px);
+  transition:
+    opacity   0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    filter    0.70s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Swoosh: sweeps in from far right with spin — springy overshoot */
+.animFlyRight {
+  transform: translate(120px, 30px) rotate(40deg) scale(0.7);
+  filter: blur(6px);
+  transition:
+    opacity   0.80s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.80s cubic-bezier(0.22, 1.8, 0.36, 0.9),
+    filter    0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dove: dives from upper-left with counter-rotation — dramatic overshoot */
+.animFlyDove {
+  transform: translate(-130px, -90px) rotate(-30deg) scale(0.65);
+  filter: blur(7px);
+  transition:
+    opacity   0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.18, 1.9, 0.32, 0.88),
+    filter    0.60s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animRiseText {
+  transform: translateY(22px);
+  filter: blur(2px);
+  transition:
+    opacity   0.60s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.60s cubic-bezier(0.16, 1, 0.3, 1),
+    filter    0.50s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animRiseTextFar {
+  transform: translateY(32px);
+  filter: blur(2px);
+  transition:
+    opacity   0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    filter    0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animBorderClose {
+  transform: scale(0.92);
+  filter: blur(1px);
+  transition:
+    opacity   0.50s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.50s cubic-bezier(0.16, 1, 0.3, 1),
+    filter    0.40s cubic-bezier(0.16, 1, 0.3, 1);
+}
