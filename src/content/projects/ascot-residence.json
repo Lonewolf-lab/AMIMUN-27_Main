@@ -1,0 +1,256 @@
+{
+  "slug": "ascot-residence",
+  "title": "Ascot Residence",
+  "colorTheme": "light",
+  "heading": "An opportunity in artistry for Haven’s architects, for a residence defined by quiet elegance, expansive openness, and a seamless dialogue with the landscape beyond.",
+  "content": "<p>The Ascot Residence was conceived for clients evolving from apartment living, to a home designed for openness and entertaining, with elegance. Every design decision prioritises seamless flow between indoor and outdoor spaces, combining functionality with refined aesthetics. Integrated joinery, hidden appliances and carefully positioned glazing ensure that spaces feel expansive, while maintaining privacy from neighbouring properties. </p>",
+  "details": [
+    {
+      "label": "Name",
+      "value": "Ascot Residence"
+    },
+    {
+      "label": "Status",
+      "value": "Completed 2019"
+    },
+    {
+      "label": "Location",
+      "value": "Ascot Vale, Melbourne"
+    },
+    {
+      "label": "Architect",
+      "value": "Haven Design"
+    }
+  ],
+  "mainImage": {
+    "id": "cG9zdDoyNjQ=",
+    "alt": "",
+    "caption": "",
+    "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/11_Harmony_Road_25-scaled-1.jpg",
+    "width": 4000,
+    "height": 2666,
+    "blurPlaceholder": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAsAA4BaJZQC7AEUpBLogEoYAPa+xyTotPf63DjJcj6gvNykalnsfey8TiIjLMyr5EJX9Wklj3GLcszpnGoZnrajfRljWaAAAA=="
+  },
+  "nextPost": {
+    "heading": "The Boulevard",
+    "description": false,
+    "label": "2018",
+    "link": {
+      "target": false,
+      "title": "The Boulevard",
+      "url": "/projects/the-boulevard/"
+    },
+    "image": {
+      "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/IMAGE_00059.jpeg",
+      "alt": "",
+      "width": "4000",
+      "height": "2666",
+      "blurPlaceholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAsAA4BaJbACdAD5gElM/qoAAP5xoelc0P+isujBtgcHuS9qLotN3GKEHFGHn/I6s0QE1sU7rbUwEbfWa712HyB+nkRiLhIOuVgQfehuzLMeQNjgAA=="
+    },
+    "videoUrl": false
+  },
+  "blocks": [
+    {
+      "type": "image",
+      "imageCount": "1",
+      "imageWidth": "regular",
+      "caption": false,
+      "captionSecondary": false,
+      "image": {
+        "id": "cG9zdDoyOTM=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/3.-11-Harmony-23_preserved_1200x900-1.jpg",
+        "width": 1267,
+        "height": 1900,
+        "blurPlaceholder": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAABwBACdASoQABgAPu1iqk2ppaQiMAgBMB2JYwAAXAjX3k6h/y3aJnvHiQsCgAD+3qwHgFao+lFDoVU3A3sqOJHNCswJksyuBNMRWB60iHrglppIzaIUS+JUcz4Pv2EDZinFcb3MEEmzfLkHpWePQVbATdlR6nBy3aqEnxdI62k7SIVDK1IeDtSv5Wtuexulfl3dszh8jg+iwAAA"
+      },
+      "imageSecondary": {
+        "id": "cG9zdDoyMTk=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/8.-20230807_R-Architecture_Hanover-St_009.jpg",
+        "width": 1333,
+        "height": 2000,
+        "blurPlaceholder": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABwBACdASoQABgAPu1iqU2ppaQiMAgBMB2JZQC/OdwLg2TcI7MkH3i0+YirAADXYt/A0jsZEQkILI+rxRd1CJNy/nosUL0GGJb5wT/xSPP8pkienPvG2P+Ua2ZybXw0aYKG2wZknl1aDZSXHJDfCy/ek0H7jgQXs+XXJU5giNot4tKoPxFgAA=="
+      },
+      "video": null,
+      "videoSecondary": null
+    },
+    {
+      "type": "image",
+      "imageCount": "1",
+      "imageWidth": "full",
+      "caption": false,
+      "captionSecondary": false,
+      "image": {
+        "id": "cG9zdDoyOTU=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/10.-11-Harmony-13_preserved_1200x900-1.jpg",
+        "width": 1900,
+        "height": 1267,
+        "blurPlaceholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAQCdASoQAAsAA4BaJZwAAsf1b2gR4ADNdvxoljZyubsCv8kHaqiVv22/dXSvsDEXwiKekXULO9BV6A8cz/Fp7L1N6sv8p7980s1PgaTb5kXPYyu/BPYHYEAAAA=="
+      },
+      "imageSecondary": null,
+      "video": null,
+      "videoSecondary": null
+    },
+    {
+      "type": "image",
+      "imageCount": "2",
+      "imageWidth": "regular",
+      "caption": false,
+      "captionSecondary": false,
+      "image": {
+        "id": "cG9zdDoyNjE=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/11_Harmony_Road_5-scaled-1.jpg",
+        "width": 4000,
+        "height": 2666,
+        "blurPlaceholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAsAA4BaJQBdgCHwzzTbEakAAP7IY7UP4tNkBCKzC/5cbL11qfh30gmcvDkWiBYHtQr5ZFRbXIUi2Am0cuUXdtyPZctPzlAzKUAAAAA="
+      },
+      "imageSecondary": {
+        "id": "cG9zdDoyNjU=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/11_Harmony_Road_31-scaled-1.jpg",
+        "width": 4000,
+        "height": 2666,
+        "blurPlaceholder": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAsAA4BaJZQAAjRQpa1usAD+r9iZgk9iA+WKMoRlieTVmlrguliiOkGXQAUdWS79X+ygAAA="
+      },
+      "video": null,
+      "videoSecondary": null
+    },
+    {
+      "type": "image",
+      "imageCount": "1",
+      "imageWidth": "full",
+      "caption": false,
+      "captionSecondary": false,
+      "image": {
+        "id": "cG9zdDoyNjM=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/11_Harmony_Road_17-scaled-1.jpg",
+        "width": 4000,
+        "height": 2666,
+        "blurPlaceholder": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABwAgCdASoQAAsAA4BaJZAC7AYvN2vt5w1DN1mAAP6PkWVW/A+E2/QYG3fnE3OuPldwUhl+nfgC9/dPWDOJJy/KSLaNXOO5JwefFLUCkgzPB7fhF1LKo2NUJoRhuAEyiSQAAA=="
+      },
+      "imageSecondary": {
+        "id": "cG9zdDoyODU=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/20230807_R-Architecture_Hanover-St_076.jpg",
+        "width": 2667,
+        "height": 4000,
+        "blurPlaceholder": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JQBUeg8QAcjwlZy8enTAA/sqTOGlBA6mf3F1k4zivH31XpiTSuuzLiL1jZINxoyC0MaSd7KeghfnBqxE2omJoXMSOLnmgkQNvrGhQAAA="
+      },
+      "video": null,
+      "videoSecondary": null
+    },
+    {
+      "type": "image",
+      "imageCount": "1",
+      "imageWidth": "regular",
+      "caption": false,
+      "captionSecondary": false,
+      "image": {
+        "id": "cG9zdDoyOTY=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/x-11-Harmony-10_preserved_1200x900-1.jpg",
+        "width": 3652,
+        "height": 2435,
+        "blurPlaceholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAsAA4BaJYwAAvnX9hPFRTeAAP5Pt7IIgt+eESxbatzHCBX0WLEqOhp2+cY/YpLCmV1l6RKEm5D8x8cxkX7CvzE7+tGZLdZ6a60zehPAiPp7CHAAAA=="
+      },
+      "imageSecondary": {
+        "id": "cG9zdDoyODk=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/Obsidian-Final-26.02.26-44-scaled-1.jpg",
+        "width": 2666,
+        "height": 4000,
+        "blurPlaceholder": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBACdASoQABgAPu1kqU2ppaOiMAgBMB2JZwDDNCHo5kWPigcnH7RLQgD9LDCg6Ig5D3/QgulzOZdz+iy1o7u5jsr/QSoWauuvFPIkQgveCbbg9fw3FkzheVikQAuHuJX51zyGv3QUR7+1Z06T+85m1mRZkgJEiBmztMa7z7AAAA=="
+      },
+      "video": null,
+      "videoSecondary": null
+    },
+    {
+      "type": "section-intro",
+      "heading": "In collaboration",
+      "subheading": "Philosophy",
+      "content": "<p>Prioritising open living, The Ascot Residence is tailored to an entertainment-focused lifestyle. The design needed to balance openness with privacy, employing strategically placed glazing and internal glass partitions, with a light-filled entry void to draw natural light deep into the home despite its close neighbouring boundaries.</p>\n",
+      "cta": false,
+      "image": null,
+      "video": null
+    },
+    {
+      "type": "image-three-column",
+      "images": [
+        {
+          "image": {
+            "id": "cG9zdDoxNzM=",
+            "alt": "",
+            "caption": "",
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/Image_3-1-scaled-1.jpg",
+            "width": 4000,
+            "height": 3200,
+            "blurPlaceholder": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAA0AA4BaJZQCdAELz7Q6RYAAAP7139YY96wMBN1/P9+SYEPF6a5KjySV0gjUeF+4ryPg9G/9ao1p7zlnlAAA"
+          },
+          "video": false
+        },
+        {
+          "image": {
+            "id": "cG9zdDoyNjc=",
+            "alt": "",
+            "caption": "",
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/Our-collaborators-scaled-1.jpg",
+            "width": 4000,
+            "height": 2667,
+            "blurPlaceholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQAgCdASoQAAsAA4BaJQBOgMYO2DQpwSwAAP7YePSOCCWbMJU0l/K/sHO8j9h5tO//bNerVZcj/o5zYJL5FfmNcdbsgrdf03jsTknI2I38YU9wB7lEDzMLPnsYak2x8/MKQvmv9cAAAA=="
+          },
+          "video": false
+        },
+        {
+          "image": {
+            "id": "cG9zdDoyNzU=",
+            "alt": "",
+            "caption": "",
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/01/wet-areas-17-1-scaled-1.jpg",
+            "width": 4000,
+            "height": 2666,
+            "blurPlaceholder": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQAAsAA4BaJZQC7AC6vmrYAAD+UwDbdeqUtRyjlv588MArfAY8AL11HBh6NzLU/KcVGADhCQAAAA=="
+          },
+          "video": false
+        }
+      ]
+    },
+    {
+      "type": "list-carousel",
+      "heading": "Project Highlights",
+      "description": "Timber façades, stone surfaces and thoughtful lighting reinforce a sense of warmth and subtle sophistication, balancing elegance and everyday usability. Key architectural elements include expansive stacker doors and an operable alfresco roof system that create a seamless indoor–outdoor connection and with integrated joinery, concealed services and refined material selections that work in unison to maintain clean lines while supporting functionality. Resulting in a residence that is both highly considered and effortlessly liveable.",
+      "panels": [
+        {
+          "image": {
+            "id": "cG9zdDoyOTI=",
+            "alt": "",
+            "caption": "",
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/2.-11-Harmony-22_preserved_1200x900-1-1.jpg",
+            "width": 1872,
+            "height": 1552,
+            "blurPlaceholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQAQCdASoQAA0AA4BaJbACdAD6JvQcoAD+7kczwVYbTKTvzhSwpQ6tLaHPreZ7iSqz0WEkV19suC0Ch/M/m7fDaupvNReu/sphQ/sxAhMvRazS+gIypeuZCDeuuGuhRC9pAAAA"
+          },
+          "description": false
+        }
+      ],
+      "list": [
+        {
+          "label": false,
+          "value": false
+        }
+      ]
+    }
+  ]
+}

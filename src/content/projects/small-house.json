@@ -1,0 +1,272 @@
+{
+  "slug": "small-house",
+  "title": "Small House",
+  "colorTheme": "light",
+  "heading": "A critical collaboration with R Architecture for a residence that transforms constraint into opportunity, celebrating industrial character within a compact urban form.",
+  "content": "<p>A uniquely considered design, shaped by a highly constrained inner-city site. The project vision centred on delivering a functional and light-filled residence within a compact 6-metre-wide footprint. Drawing inspiration from Brunswick’s industrial character, Haven’s role was to bring this vision to life with precision, navigating spatial limitations and complex geometries. The detailed construction led to a home that feels both expansive and distinctly grounded in its context.</p>",
+  "details": [
+    {
+      "label": "Name",
+      "value": "Small House"
+    },
+    {
+      "label": "Status",
+      "value": "Completed 2024"
+    },
+    {
+      "label": "Location",
+      "value": "Brunswick, Melbourne"
+    },
+    {
+      "label": "Architect",
+      "value": "R Architecture"
+    }
+  ],
+  "mainImage": {
+    "id": "cG9zdDoyMjE=",
+    "alt": "",
+    "caption": "",
+    "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/10.-20230807_R-Architecture_Hanover-St_054.jpg",
+    "width": 1429,
+    "height": 2000,
+    "blurPlaceholder": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBACdASoQABYAPu1iqU2ppaQiMAgBMB2JYgC7ACHKVckQ1rL87gjVAAD+8CwpawKM24Mk/VJI+QzbnI1KZzEyEP06eRIddSqiyjFcOnnNVPpKdB1s/lNcVyDLPPkq2Tob/elW62A3AA69Z3/BkzcEo3Z6qH835lH1u6Vi5C6k1xLpPSq2XEwuqQAAAA=="
+  },
+  "nextPost": {
+    "heading": "Obsidian",
+    "description": false,
+    "label": "2025",
+    "link": {
+      "target": false,
+      "title": "Obsidian",
+      "url": "/projects/obsidian/"
+    },
+    "image": {
+      "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/Obsidian-Final-26.02.26-34-1-scaled-1.jpg",
+      "alt": "",
+      "width": "2666",
+      "height": "4000",
+      "blurPlaceholder": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABQBACdASoQABgAPu1mq04ppaQiMAgBMB2JZwDCgBuMWL3IvnK75605Vx4sAP0rSvcWhFwvRrVdgekpriSciv6hKFhQfp/XXx9Heg1yM7ZQ8p8totJ4U1jNluFRLTEub+GeSFO6oZqBeG0jKhK4QpBre8WfVy151er2ksOhC2aDo7z7gqr/jFAQ7DqdUJ2KhAA="
+    },
+    "videoUrl": "https://vz-a28667fb-df9.b-cdn.net/530c99f8-68bf-454e-b2d2-a2069e2c6a2c/playlist.m3u8"
+  },
+  "blocks": [
+    {
+      "type": "image",
+      "imageCount": "2",
+      "imageWidth": "regular",
+      "caption": false,
+      "captionSecondary": false,
+      "image": {
+        "id": "cG9zdDoyMTc=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/4.-20230807_R-Architecture_Hanover-St_004.jpg",
+        "width": 1333,
+        "height": 2000,
+        "blurPlaceholder": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwBACdASoQABgAPu1mqk4ppaOiMAgBMB2JZQC7ABcMSxPE1BX8/WupSQAA31tiNDcrKYqygmxJ0wOap6itTUwEv32xRQKVG/YcLU2rxmRf7KMJOSha1c6huhj+Ed1dQ08414e0enBdmtBZKYsV5iNca55AAA=="
+      },
+      "imageSecondary": {
+        "id": "cG9zdDoyMTk=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/8.-20230807_R-Architecture_Hanover-St_009.jpg",
+        "width": 1333,
+        "height": 2000,
+        "blurPlaceholder": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABwBACdASoQABgAPu1iqU2ppaQiMAgBMB2JZQC/OdwLg2TcI7MkH3i0+YirAADXYt/A0jsZEQkILI+rxRd1CJNy/nosUL0GGJb5wT/xSPP8pkienPvG2P+Ua2ZybXw0aYKG2wZknl1aDZSXHJDfCy/ek0H7jgQXs+XXJU5giNot4tKoPxFgAA=="
+      },
+      "video": null,
+      "videoSecondary": null
+    },
+    {
+      "type": "image",
+      "imageCount": "1",
+      "imageWidth": "regular",
+      "caption": false,
+      "captionSecondary": false,
+      "image": {
+        "id": "cG9zdDoyMjI=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/12.-20230807_R-Architecture_Hanover-St_104.jpg",
+        "width": 1428,
+        "height": 2000,
+        "blurPlaceholder": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAwCdASoQABYAPu1iqU2ppaOiMAgBMB2JQBhQBA/u3ASsquQTgDIAAP5gmJLb7BsL+HtdfyYdpt8LFd3NPwDM6RqTMF20neiO/5Y8A0kt2HxavBr5S9EQfkDp9n8reR576XRo8UlWIQAA"
+      },
+      "imageSecondary": null,
+      "video": null,
+      "videoSecondary": null
+    },
+    {
+      "type": "image",
+      "imageCount": "2",
+      "imageWidth": "regular",
+      "caption": false,
+      "captionSecondary": false,
+      "image": {
+        "id": "cG9zdDoyMTg=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/6.-20230807_R-Architecture_Hanover-St_032.jpg",
+        "width": 1333,
+        "height": 2000,
+        "blurPlaceholder": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAACwAwCdASoQABgAPu1kqk2ppaQiMAgBMB2JYwCdAGCbnPJsCZLGgAD90kO1MkWhTrZAekG5zH2ruOJRDYZFyV3Gqe/5Ibb3MYHwtna4GvPfbS98sxn1XE8lw2H0R8hUzoLQCgQqmtQA8DV05VDMSZZ0hDzG7fToAAA="
+      },
+      "imageSecondary": {
+        "id": "cG9zdDoyODY=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/20230807_R-Architecture_Hanover-St_034.jpg",
+        "width": 2667,
+        "height": 4000,
+        "blurPlaceholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADQAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JQBOmUAEa++5MX9flYAAA/NcmfjB895a4cuiyy6F+siYFS75bY3WMSQ4z04uHfbowF606FD4OicXHu2t6q9yHYJDrFhv3aWY2xPrr+IUg7ZRuvPxcBlYXalmrmHIc9WclJ+Y/MAA="
+      },
+      "video": null,
+      "videoSecondary": null
+    },
+    {
+      "type": "image",
+      "imageCount": "2",
+      "imageWidth": "regular",
+      "caption": false,
+      "captionSecondary": false,
+      "image": {
+        "id": "cG9zdDoyODM=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/20230807_R-Architecture_Hanover-St_089.jpg",
+        "width": 2667,
+        "height": 4000,
+        "blurPlaceholder": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBACdASoQABgAPu1kqk4ppaQiMAgBMB2JZACdMoADAWPqqaWjIhmMIAD+FL8h7xEZ6NivymEzEWDwuGv0oaluPyBnwe5RJATkyr4Z50wBR8dwPYyhK87QchQZSk9w20cz7iDmoh0Al7FVt6Ma2IBL+Bm3IoLwq5TdUAAA"
+      },
+      "imageSecondary": {
+        "id": "cG9zdDoyODU=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/20230807_R-Architecture_Hanover-St_076.jpg",
+        "width": 2667,
+        "height": 4000,
+        "blurPlaceholder": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JQBUeg8QAcjwlZy8enTAA/sqTOGlBA6mf3F1k4zivH31XpiTSuuzLiL1jZINxoyC0MaSd7KeghfnBqxE2omJoXMSOLnmgkQNvrGhQAAA="
+      },
+      "video": null,
+      "videoSecondary": null
+    },
+    {
+      "type": "image",
+      "imageCount": "1",
+      "imageWidth": "regular",
+      "caption": false,
+      "captionSecondary": false,
+      "image": {
+        "id": "cG9zdDoyMTY=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/2.-20230807_R-Architecture_Hanover-St_152.jpg",
+        "width": 1428,
+        "height": 2000,
+        "blurPlaceholder": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAwBACdASoQABYAPu1iqU2ppaOiMAgBMB2JZACzgB+MgHcgyIarpUwcwTwA/tyFNJ8ezQmQ2ORkZjhO9OWro7ZqqWmobIuzUKXqYNWnjK3QasXtyEtX+4W1k8orW8SOGDQbygH2ABKDp4OPFzsZhMbotxn81HYzPOTKaiV9DKODLEof4+qu4xw7vCQQAA=="
+      },
+      "imageSecondary": {
+        "id": "cG9zdDoyODU=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/20230807_R-Architecture_Hanover-St_076.jpg",
+        "width": 2667,
+        "height": 4000,
+        "blurPlaceholder": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JQBUeg8QAcjwlZy8enTAA/sqTOGlBA6mf3F1k4zivH31XpiTSuuzLiL1jZINxoyC0MaSd7KeghfnBqxE2omJoXMSOLnmgkQNvrGhQAAA="
+      },
+      "video": null,
+      "videoSecondary": null
+    },
+    {
+      "type": "section-intro",
+      "heading": "In collaboration",
+      "subheading": "Philosophy",
+      "content": "<p>This project embraces the challenge of a compact inner-city block, turning spatial constraints into opportunities for innovation and light-filled living. The materials, surfaces and details were considered to reflect the industrial character of Brunswick while maintaining clean, contemporary lines. By weaving together recycled brick, polished concrete, curved steel and carefully crafted joinery, the design celebrates both functionality and personality, creating a home that feels expansive and luminous, distinctively grounded in its context.</p>\n",
+      "cta": false,
+      "image": null,
+      "video": null
+    },
+    {
+      "type": "image-three-column",
+      "images": [
+        {
+          "image": {
+            "id": "cG9zdDoxNzM=",
+            "alt": "",
+            "caption": "",
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/Image_3-1-scaled-1.jpg",
+            "width": 4000,
+            "height": 3200,
+            "blurPlaceholder": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAA0AA4BaJZQCdAELz7Q6RYAAAP7139YY96wMBN1/P9+SYEPF6a5KjySV0gjUeF+4ryPg9G/9ao1p7zlnlAAA"
+          },
+          "video": false
+        },
+        {
+          "image": {
+            "id": "cG9zdDoyNjc=",
+            "alt": "",
+            "caption": "",
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/Our-collaborators-scaled-1.jpg",
+            "width": 4000,
+            "height": 2667,
+            "blurPlaceholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQAgCdASoQAAsAA4BaJQBOgMYO2DQpwSwAAP7YePSOCCWbMJU0l/K/sHO8j9h5tO//bNerVZcj/o5zYJL5FfmNcdbsgrdf03jsTknI2I38YU9wB7lEDzMLPnsYak2x8/MKQvmv9cAAAA=="
+          },
+          "video": false
+        },
+        {
+          "image": {
+            "id": "cG9zdDoyNzU=",
+            "alt": "",
+            "caption": "",
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/01/wet-areas-17-1-scaled-1.jpg",
+            "width": 4000,
+            "height": 2666,
+            "blurPlaceholder": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQAAsAA4BaJZQC7AC6vmrYAAD+UwDbdeqUtRyjlv588MArfAY8AL11HBh6NzLU/KcVGADhCQAAAA=="
+          },
+          "video": false
+        }
+      ]
+    },
+    {
+      "type": "list-carousel",
+      "heading": "Project Highlights",
+      "description": "Small House transforms its narrow block into a light-filled, three-bedroom home that feels spacious and functional. The Industrial-inspired materials are balanced with clean white plaster surfaces and birch ply joinery to create a modern warehouse aesthetic. Cathedral and vaulted ceilings, along with strategically placed skylights and a fully glazed rear façade, draw natural light deep into the home while maintaining privacy from neighbouring properties. Thoughtful details, such as the offset spine-back staircase with integrated tile inserts, mesh balustrading, and a rain garden for sustainable roof runoff, enhance both the functionality and personality of the residence, ensuring every element contributes to a cohesive, expressive design.",
+      "panels": [
+        {
+          "image": {
+            "id": "cG9zdDoyMjQ=",
+            "alt": "",
+            "caption": "",
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/14.-20230807_R-Architecture_Hanover-St_116.jpg",
+            "width": 1333,
+            "height": 2000,
+            "blurPlaceholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAwCdASoQABgAPu1iqk2ppaQiMAgBMB2JQBdgDSuzeTjc2bDDRsuAAP72F7UsdNOf7JZ81LyTPje8KrWHyKy3J4P1SPVTwOJlGIORonR6u7/UR8hR4AAA"
+          },
+          "description": false
+        },
+        {
+          "image": {
+            "id": "cG9zdDoyMjM=",
+            "alt": "",
+            "caption": "",
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/13.-20230807_R-Architecture_Hanover-St_113.jpg",
+            "width": 1429,
+            "height": 2000,
+            "blurPlaceholder": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABwAwCdASoQABYAPu1iqU2ppaQiMAgBMB2JQAALc7ZkiBVG6AAA/sMjj1wCRyf9R6FNuB6y8HwhpgYanvJH6x45xFTDsQeJ2PZC/5KITb2vvWnS5sax0pAAAAA="
+          },
+          "description": false
+        }
+      ],
+      "list": [
+        {
+          "label": false,
+          "value": false
+        },
+        {
+          "label": false,
+          "value": false
+        }
+      ]
+    }
+  ]
+}

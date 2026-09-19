@@ -1,0 +1,205 @@
+{
+  "slug": "expertise",
+  "title": "expertise",
+  "blocks": [
+    {
+      "type": "section-intro",
+      "heading": "Guided by precision and craft",
+      "subheading": "Expertise",
+      "content": "<p>Every decision reflects restraint and purpose. As a third-generation practice, our approach is shaped by a foundation in furniture and joinery craftsmanship. Each project is approached with discipline; every line, junction, and material resolved in service of the whole. Simplicity is not the absence of detail, but the outcome of clarity, intent, and rigorous refinement</p>\n",
+      "cta": false,
+      "image": null,
+      "video": null
+    },
+    {
+      "type": "image",
+      "imageCount": "1",
+      "imageWidth": "full",
+      "caption": false,
+      "captionSecondary": false,
+      "image": {
+        "id": "cG9zdDoxNjc=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/Hero-Fallback.jpg",
+        "width": 3024,
+        "height": 2016,
+        "blurPlaceholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAA4BaJZwCsAEfSviG+wAA/vD5G9OAz3c9w7WCuWFphjEL1Vjuca0Zw4F/Tw9ESz5n70wOl8FIDOGWdwXjPoAAAA=="
+      },
+      "imageSecondary": null,
+      "video": {
+        "id": "cG9zdDo2MDg=",
+        "caption": "",
+        "url": "https://vz-a28667fb-df9.b-cdn.net/f2b69476-c99b-43ea-bd5b-74155a0d98ac/playlist.m3u8",
+        "width": 2560,
+        "height": 1440
+      },
+      "videoSecondary": null
+    },
+    {
+      "type": "section-intro",
+      "heading": "From concept to completion",
+      "subheading": "Our Process",
+      "content": "<p>We’re often engaged from the earliest design conversations. Early involvement allows us to understand the intent behind every line and decision, protecting the integrity of the architecture and ensuring clarity from the first sketch to the final finish. It creates a smoother process and a home that remains true to its original vision.</p>\n",
+      "cta": false,
+      "image": null,
+      "video": null
+    },
+    {
+      "type": "image-three-column",
+      "images": [
+        {
+          "image": {
+            "id": "cG9zdDoxNjI=",
+            "alt": "",
+            "caption": "",
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/Image_1.jpg",
+            "width": 3312,
+            "height": 3312,
+            "blurPlaceholder": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAQCdASoQABAAA4BaJQBYdsYTe2YwWIAA9mXm45CQBVY6m+vWLE8D9wEGyPFO3v1misv9KyUMRbbYkBsqcrWsn9wDjYi4a58tzoqFrydEb+II/H70HySWkFcXv9BC/M6tA0MqQ9Vw6gaN6jwAAA=="
+          },
+          "video": false
+        },
+        {
+          "image": {
+            "id": "cG9zdDoxNjM=",
+            "alt": "",
+            "caption": "",
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/Image_2.jpg",
+            "width": 3312,
+            "height": 3312,
+            "blurPlaceholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQAgCdASoQABAAA4BaJZgCdAYw7L2MT17AAP7TPpFYMjaGh46jpcxod49QEKCTsZnR2YwxsWXsFacDjhKv2ifGz6rDZNHofRKiFzlqyglnQ1EoWqH65nQhEw2zQMzGQ4HcERKpOK9vVs8h0LUtIAAA"
+          },
+          "video": false
+        },
+        {
+          "image": {
+            "id": "cG9zdDoxNjQ=",
+            "alt": "",
+            "caption": "",
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/Image_3.jpg",
+            "width": 3312,
+            "height": 3312,
+            "blurPlaceholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQABAAA4BaJaQAApG1HBXl/AAA/Pu7Qj7tnPxkEFLRiTyYECNrobqrPxwWeBuXk55TnuWFLnfhW0ba08S0vnyAI1XjkW7zvuU/lz/y0F9+OWAA"
+          },
+          "video": false
+        }
+      ]
+    },
+    {
+      "type": "section-intro",
+      "heading": "Complexity, refined.",
+      "subheading": "Capability",
+      "content": "<p>Our experience allows ambitious architecture to be delivered with certainty. Every layer of the project is coordinated with care. Early contractor involvement, disciplined cost planning and rigorous programme management allow ambitious ideas to be realised without compromise.</p>\n",
+      "cta": false,
+      "image": {
+        "id": "cG9zdDoyODQ=",
+        "alt": "",
+        "caption": "",
+        "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/20230807_R-Architecture_Hanover-St_134.jpg",
+        "width": 2667,
+        "height": 4000,
+        "blurPlaceholder": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgCdMoADT7Gr4uX4t2Md2bQAAP7lOI1cK3XPOKIKAa3qeI6lj/s+j8CCEhbdJJP3Zi0MOD/5SRQZhJX+pryGVVICfytaxTqDc86hpIzz2/xm4EMyINsNw3jyl9K+YCmYw6/XXKbp3+a3ssVLAgAA"
+      },
+      "video": null
+    },
+    {
+      "type": "section-intro",
+      "heading": false,
+      "subheading": "Projects",
+      "content": "<p>A curated selection of homes shaped by collaboration and crafted with precision. Each home reflects our commitment to architectural clarity, exacting detail and the protection of design intent.</p>\n",
+      "cta": false,
+      "image": null,
+      "video": null
+    },
+    {
+      "type": "card-projects",
+      "layout": "2",
+      "source": "postType",
+      "sourcePostType": "projects",
+      "filter": "recent",
+      "selectedPosts": [],
+      "cards": [
+        {
+          "heading": "Calibre",
+          "description": false,
+          "label": "2025",
+          "link": {
+            "target": false,
+            "title": "Calibre",
+            "url": "/projects/calibre/"
+          },
+          "image": {
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/Kitchen-area-24-1-scaled-1.jpg",
+            "alt": "",
+            "width": "4000",
+            "height": "2666",
+            "blurPlaceholder": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwAgCdASoQAAsAA4BaJZACdADPoBkDw2VzwAD+J7Bx6bMpzOXXi5YBnGl3DWZ8BfGUSktNQvOeEJAjkoQVGMzAHppRDlW76rWFf0WLP+6raYsRairh5UkcAAA="
+          },
+          "videoUrl": false
+        },
+        {
+          "heading": "Small House",
+          "description": false,
+          "label": "2024",
+          "link": {
+            "target": false,
+            "title": "Small House",
+            "url": "/projects/small-house/"
+          },
+          "image": {
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/10.-20230807_R-Architecture_Hanover-St_054.jpg",
+            "alt": "",
+            "width": "1429",
+            "height": "2000",
+            "blurPlaceholder": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBACdASoQABYAPu1iqU2ppaQiMAgBMB2JYgC7ACHKVckQ1rL87gjVAAD+8CwpawKM24Mk/VJI+QzbnI1KZzEyEP06eRIddSqiyjFcOnnNVPpKdB1s/lNcVyDLPPkq2Tob/elW62A3AA69Z3/BkzcEo3Z6qH835lH1u6Vi5C6k1xLpPSq2XEwuqQAAAA=="
+          },
+          "videoUrl": false
+        },
+        {
+          "heading": "Obsidian",
+          "description": false,
+          "label": "2025",
+          "link": {
+            "target": false,
+            "title": "Obsidian",
+            "url": "/projects/obsidian/"
+          },
+          "image": {
+            "sourceUrl": "https://haven.api.jtbadev.com/wp-content/uploads/2026/03/Obsidian-Final-26.02.26-34-1-scaled-1.jpg",
+            "alt": "",
+            "width": "2666",
+            "height": "4000",
+            "blurPlaceholder": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABQBACdASoQABgAPu1mq04ppaQiMAgBMB2JZwDCgBuMWL3IvnK75605Vx4sAP0rSvcWhFwvRrVdgekpriSciv6hKFhQfp/XXx9Heg1yM7ZQ8p8totJ4U1jNluFRLTEub+GeSFO6oZqBeG0jKhK4QpBre8WfVy151er2ksOhC2aDo7z7gqr/jFAQ7DqdUJ2KhAA="
+          },
+          "videoUrl": "https://vz-a28667fb-df9.b-cdn.net/530c99f8-68bf-454e-b2d2-a2069e2c6a2c/playlist.m3u8"
+        }
+      ]
+    }
+  ],
+  "rawProps": {
+    "seo": {
+      "title": "Expertise - Haven",
+      "description": "",
+      "canonical": "https://www.havenconstructions.com.au/expertise/",
+      "openGraph": {
+        "title": "Expertise - Haven",
+        "description": "",
+        "image": {
+          "url": "",
+          "alt": ""
+        }
+      },
+      "twitter": {
+        "title": "",
+        "description": "",
+        "image": {
+          "url": "",
+          "alt": ""
+        }
+      },
+      "noindex": false,
+      "nofollow": false
+    }
+  }
+}
