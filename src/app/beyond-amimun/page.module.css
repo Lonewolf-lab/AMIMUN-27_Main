@@ -1,0 +1,426 @@
+.pageContainer {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  padding-bottom: var(--space-4xl);
+  position: relative;
+}
+
+/* ── Hero Section ────────────────────────────── */
+.heroSection {
+  width: 100%;
+  padding-top: calc(var(--navigation-height) + var(--space-3xl));
+  padding-bottom: var(--space-3xl);
+  padding-inline: clamp(24px, 5vw, 80px);
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.heroInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0c388d;
+  font-weight: 600;
+}
+
+.heroDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #0c388d;
+}
+
+.titleMain {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: clamp(2.5rem, 5.5vw, 4.8rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #0c388d;
+  margin: 0;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-2xl);
+  align-items: start;
+  margin-top: var(--space-m);
+}
+
+.heroSubtitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.highlightCard {
+  background: rgba(12, 56, 141, 0.04);
+  border-left: 4px solid #0c388d;
+  border-radius: 0 16px 16px 0;
+  padding: var(--space-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  box-shadow: 0 4px 20px rgba(12, 56, 141, 0.04);
+}
+
+.highlightTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0c388d;
+  font-weight: 700;
+  margin: 0;
+}
+
+.highlightText {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* ── Club Identity Royal Blue Banner ────────────────────────────── */
+.clubBanner {
+  width: 100%;
+  background-color: #0c388d;
+  color: #ffffff;
+  padding: var(--space-3xl) clamp(24px, 5vw, 80px);
+  margin-block: var(--space-3xl);
+  position: relative;
+  box-shadow: 0 16px 40px rgba(12, 56, 141, 0.2);
+}
+
+.clubInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.bannerTag {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+.clubStatement {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-1);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  max-width: 85ch;
+}
+
+/* ── Pinned Horizontal Train Track Initiatives Section ── */
+.horizontalPinnedWrapper {
+  position: relative;
+  width: 100%;
+  height: 350vh; /* Gives full scroll travel for the train track */
+  background-color: var(--color-background);
+}
+
+.horizontalStickyViewport {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: var(--navigation-height);
+  padding-bottom: var(--space-l);
+  box-sizing: border-box;
+}
+
+.horizontalHeader {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto var(--space-xl);
+  padding-inline: clamp(24px, 5vw, 80px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-xl);
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.sectionLabel {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0c388d;
+  font-weight: 600;
+}
+
+.sectionTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.sectionDesc {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 42ch;
+}
+
+/* Horizontal Track of Cards */
+.trainTrackContainer {
+  width: 100%;
+  overflow: visible;
+  padding-inline: clamp(24px, 5vw, 80px);
+}
+
+.trainTrack {
+  display: inline-flex;
+  gap: clamp(24px, 3vw, 40px);
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+.trainCard {
+  width: clamp(340px, 32vw, 460px);
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: 24px;
+  padding: var(--space-xl) var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  min-height: 360px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03), 0 20px 48px rgba(12, 56, 141, 0.06);
+  transition: transform 0.35s var(--ease),
+              box-shadow 0.35s var(--ease),
+              border-color 0.35s var(--ease);
+}
+
+.trainCard:hover {
+  transform: translateY(-8px);
+  border-color: #0c388d;
+  box-shadow: 0 16px 40px rgba(12, 56, 141, 0.14);
+}
+
+.cardTopRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-s);
+}
+
+.cardNumber {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-3);
+  font-weight: 800;
+  color: #0c388d;
+}
+
+.cardTag {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--2);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.cardTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-2);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.cardDesc {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Progress Bar at Bottom of Track */
+.progressBarWrapper {
+  max-width: 1200px;
+  width: calc(100% - 2 * clamp(24px, 5vw, 80px));
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 4px;
+  margin: var(--space-xl) auto 0;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: #0c388d;
+  border-radius: 4px;
+  transition: width 0.1s linear;
+}
+
+/* ── Prestigious Collaborations Grid ── */
+.collabSection {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto var(--space-4xl);
+  padding-inline: clamp(24px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.collabHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.collabTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-4);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.collabDesc {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.collabGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-l);
+}
+
+.collabCard {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.35s var(--ease),
+              box-shadow 0.35s var(--ease),
+              border-color 0.35s var(--ease);
+}
+
+.collabCard:hover {
+  transform: translateY(-5px);
+  border-color: #0c388d;
+  box-shadow: 0 16px 32px rgba(12, 56, 141, 0.1);
+}
+
+.collabTopRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collabIndex {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-1);
+  font-weight: 800;
+  color: #0c388d;
+}
+
+.collabBadge {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--2);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0c388d;
+  background: rgba(12, 56, 141, 0.08);
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.collabName {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-1);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.collabDetail {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-l);
+  }
+
+  .horizontalHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-s);
+  }
+
+  .collabGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .trainCard {
+    width: 85vw;
+    padding: var(--space-l);
+  }
+}
