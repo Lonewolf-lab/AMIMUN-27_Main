@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import { TextReveal } from "@/components/animations/TextReveal";
 import styles from "./Awards.module.css";
 
@@ -25,8 +28,33 @@ const AWARDS_DATA = [
 ];
 
 export function Awards() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className={styles.section} id="awards">
+    <section
+      ref={sectionRef}
+      className={`${styles.section} ${isVisible ? styles.visible : ""}`}
+      id="awards"
+    >
       <p className={styles.dotHeading}>
         <span className={styles.dot} />
         <TextReveal as="span" baseDelay={100}>
@@ -34,10 +62,13 @@ export function Awards() {
         </TextReveal>
       </p>
 
-      {AWARDS_DATA.map((award) => (
+      {AWARDS_DATA.map((award, index) => (
         <div key={`${award.title}-${award.year}`}>
           <div className={styles.divider} />
-          <div className={styles.awardItem}>
+          <div
+            className={styles.awardItem}
+            style={{ transitionDelay: `${index * 0.08}s` }}
+          >
             <div className={styles.awardInner}>
               <div className={styles.awardLeft}>
                 <p className={styles.awardLeft}>{award.title}</p>

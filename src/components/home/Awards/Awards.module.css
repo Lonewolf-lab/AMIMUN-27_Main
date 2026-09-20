@@ -33,7 +33,14 @@
 .awardItem {
   position: relative;
   padding-block: var(--space-m);
-  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.7s var(--ease), background-color 0.3s ease;
+}
+
+.visible .awardItem {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .awardItem:hover {
@@ -88,5 +95,14 @@
 
   .awardRight {
     flex-basis: 60%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .awardItem,
+  .visible .awardItem {
+    opacity: 1;
+    transform: none;
+    transition: background-color 0.3s ease;
   }
 }
