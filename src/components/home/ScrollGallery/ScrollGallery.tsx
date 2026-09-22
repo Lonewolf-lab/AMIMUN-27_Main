@@ -128,7 +128,7 @@ export function ScrollGallery() {
             ))}
           </div>
 
-          <Countdown />
+          <Countdown scrollProgress={progress} />
         </div>
       </div>
     </section>

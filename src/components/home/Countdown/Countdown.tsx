@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { TextReveal } from "@/components/animations/TextReveal";
 import styles from "./Countdown.module.css";
 
@@ -24,10 +24,12 @@ function getTimeRemaining() {
   };
 }
 
-export function Countdown() {
-  const sectionRef = useRef<HTMLElement | null>(null);
+interface CountdownProps {
+  scrollProgress: number;
+}
+
+export function Countdown({ scrollProgress }: CountdownProps) {
   const [timeRemaining, setTimeRemaining] = useState<ReturnType<typeof getTimeRemaining> | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const updateTime = () => setTimeRemaining(getTimeRemaining());
@@ -37,33 +39,10 @@ export function Countdown() {
     return () => window.clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setIsVisible(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-
-        setIsVisible(true);
-        observer.unobserve(entry.target);
-      },
-      { threshold: 0.15 }
-    );
-
-    observer.observe(section);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
-      ref={sectionRef}
-      className={`${styles.section} ${isVisible ? styles.visible : ""}`.trim()}
+      className={styles.section}
+      style={{ "--countdown-progress": scrollProgress } as CSSProperties}
       aria-labelledby="countdown-heading"
     >
       <div className={styles.inner}>

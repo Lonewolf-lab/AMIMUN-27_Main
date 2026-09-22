@@ -139,6 +139,7 @@
   line-height: 1.75;
   color: var(--color-text-secondary);
   margin: 0;
+  text-align: justify;
 }
 
 /* ── Active In-View Triggered States ─────────────── */
