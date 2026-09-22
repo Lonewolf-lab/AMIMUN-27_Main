@@ -154,7 +154,7 @@ export function Hero() {
           >
             <figure className={styles.mediaFigure}>
               <Image
-                src="/videos/amity-photo.jpg"
+                src="/videos/amity-photo.jpg?v=20260922"
                 alt="Amity University campus"
                 fill
                 sizes="100vw"
