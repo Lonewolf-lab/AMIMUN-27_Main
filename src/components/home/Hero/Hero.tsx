@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { TextReveal } from "@/components/animations/TextReveal";
 import styles from "./Hero.module.css";
 
@@ -152,12 +153,11 @@ export function Hero() {
             }}
           >
             <figure className={styles.mediaFigure}>
-              <video
-                src="/videos/Amimun'27 Teaser.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
+              <Image
+                src="/videos/amity-photo.jpg"
+                alt="Amity University campus"
+                fill
+                sizes="100vw"
                 className={styles.heroVideo}
               />
             </figure>

@@ -1,0 +1,117 @@
+.section {
+  position: absolute;
+  z-index: 20;
+  right: 0;
+  bottom: 8%;
+  left: 0;
+  overflow: hidden;
+  padding: 0 var(--space-gutter);
+  color: #ffffff;
+}
+
+.inner {
+  width: 100%;
+  max-width: var(--content-max-width-wide);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  text-align: center;
+}
+
+.header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: var(--step-3);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.header p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--step-0);
+}
+
+.timer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-s);
+  margin: var(--space-l) auto 0;
+  opacity: 0;
+  transform: translateX(420px);
+  transition:
+    opacity 0.8s var(--ease),
+    transform 0.8s var(--ease);
+}
+
+.visible .timer {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.unit {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-l) var(--space-s);
+  background-color: rgba(17, 17, 17, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: var(--variable-radius);
+}
+
+.value {
+  color: #ffffff;
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+.label {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--step--1);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .section {
+    bottom: 6%;
+  }
+
+  .timer {
+    gap: var(--space-xs);
+    margin-top: var(--space-xl);
+    transform: translateX(180px);
+  }
+
+  .unit {
+    padding: var(--space-m) var(--space-2xs);
+  }
+
+  .value {
+    font-size: clamp(1.75rem, 10vw, 2.75rem);
+  }
+
+  .label {
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timer {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

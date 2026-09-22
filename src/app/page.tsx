@@ -74,7 +74,7 @@ export default function HomePage() {
       {/* 5. Contact Us: Secretariat Contacts */}
       <Collaborators />
 
-      {/* 8. Awards: Industry Recognition & Honors */}
+      {/* 6. Awards: Industry Recognition & Honors */}
       <Awards />
     </>
   );

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { Countdown } from "@/components/home/Countdown/Countdown";
 import styles from "./ScrollGallery.module.css";
 
 const CHRONICLES_IMAGES = [
@@ -126,6 +127,8 @@ export function ScrollGallery() {
               </div>
             ))}
           </div>
+
+          <Countdown />
         </div>
       </div>
     </section>
