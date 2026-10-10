@@ -14,6 +14,29 @@ export interface BeyondPillar {
   description: string;
 }
 
+export interface ClubPillar {
+  title: string;
+  subtitle: string;
+  description: string;
+  highlight: string;
+  iconName: string;
+}
+
+export interface ActivityCard {
+  step: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  frequency: string;
+}
+
+export interface FlagshipInitiative {
+  name: string;
+  category: string;
+  lead: string;
+  impact: string;
+}
+
 export const BEYOND_AMIMUN_DATA = {
   hero: {
     tag: "Student Body & Initiatives",
@@ -23,8 +46,43 @@ export const BEYOND_AMIMUN_DATA = {
     studentBodyText:
       "AMIMUN is Amity University's only conference conceptualized, planned, and implemented by an independent student body. We have made it our responsibility to walk every delegate through the preparation process, ensuring complete mastery of their agendas.",
     clubStatement:
-      "We are the MUN Club of Amity University, a group of motivated and sincere students interested in the art of Diplomacy and the world of International Relations. Led by seasoned MUNers, we strive to bring out the best in each member and promote the fundamental values of the United Nations.",
+      "We are the MUN Club of Amity University, a group of motivated and sincere students interested in the art of Diplomacy and the world of International Relations. Led by seasoned MUNers, we strive to bring out the best in each member and promote the fundamental values of the United Nations. The talent is there, and the future is clear: We want to continue our MUN journey into the future with more experience, motivation, and belief in our fellow young student diplomats.",
   },
+
+  clubPillars: [
+    {
+      title: "Diplomatic Acumen",
+      subtitle: "Mastery of UN Frameworks",
+      description:
+        "Cultivating nuanced understanding of geopolitics, bilateral diplomacy, international legal instruments, and resolution drafting procedures.",
+      highlight: "14+ Regional Treaties Analyzed",
+      iconName: "globe",
+    },
+    {
+      title: "Empowered Student Autonomy",
+      subtitle: "100% Student-Led Ecosystem",
+      description:
+        "Every aspect—from crisis scenario writing to logistics, sponsorship, and committee direction—is designed, executed, and steered by our active student club members.",
+      highlight: "Independent Secretariat",
+      iconName: "shield",
+    },
+    {
+      title: "Year-Round Pedagogy",
+      subtitle: "Beyond The Annual Conference",
+      description:
+        "Organizing bi-weekly mock debates, crisis masterclasses, delegate orientation sessions, and public speaking bootcamps for university students.",
+      highlight: "40+ Annual Masterclasses",
+      iconName: "book",
+    },
+    {
+      title: "Global Citizenship",
+      subtitle: "Cross-Border Fellowships",
+      description:
+        "Connecting young thinkers with international embassies, UN bodies, and non-governmental leaders to turn theoretical knowledge into real-world civic impact.",
+      highlight: "25+ Partner Nations",
+      iconName: "users",
+    },
+  ] as ClubPillar[],
 
   initiatives: [
     {
@@ -70,6 +128,41 @@ export const BEYOND_AMIMUN_DATA = {
         "In previous editions of AMIMUN conferences, we had the honour of securing prestigious collaborations with the United Nations Information Centre (UNIC) and other international and national organizations such as Amnesty India, Doctors Without Borders, and HeForShe.",
     },
   ] as BeyondPillar[],
+
+  delegatePreparationRoadmap: [
+    {
+      step: "Phase 01",
+      title: "Comprehensive Background Dossiers",
+      subtitle: "Substantive Research Foundation",
+      description:
+        "Every delegate is provided meticulously formulated background guides curated by experienced Executive Board members, complete with historical timelines, treaties, and bloc mandates.",
+      frequency: "Pre-Conference",
+    },
+    {
+      step: "Phase 02",
+      title: "Hands-On Delegate Bootcamps",
+      subtitle: "Rules of Procedure & Motion Simulations",
+      description:
+        "Interactive workshops walking first-timers and experienced debaters through moderated caucuses, right of reply protocols, and resolution clause formulations.",
+      frequency: "Bi-Weekly",
+    },
+    {
+      step: "Phase 03",
+      title: "Executive Board Office Hours",
+      subtitle: "Direct 1-on-1 Mentorship",
+      description:
+        "Open consultations with committee directors to clarify country policies, position papers, and crisis directives before entering the committee chamber.",
+      frequency: "Pre-Assembly",
+    },
+    {
+      step: "Phase 04",
+      title: "Live Diplomatic Assembly",
+      subtitle: "High-Calibre Deliberations",
+      description:
+        "Three intense days of negotiation, alliance formulation, and resolution voting with live feedback from seasoned chairs and international observers.",
+      frequency: "Conference Days",
+    },
+  ] as ActivityCard[],
 
   collaborations: [
     {
