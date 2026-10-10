@@ -6,6 +6,7 @@ import { Collaborators } from "@/components/home/Collaborators/Collaborators";
 import { TestimonialQuote } from "@/components/home/TestimonialQuote/TestimonialQuote";
 import { Awards } from "@/components/home/Awards/Awards";
 import { WhatYouLearn } from "@/components/home/WhatYouLearn/WhatYouLearn";
+import { LocationSection } from "@/components/home/LocationSection/LocationSection";
 
 const PHILOSOPHY_PARAGRAPHS = [
   "For the past sixteen years, AMIMUN has evolved into a leading platform where diplomacy, dialogue, and discipline meet to shape tomorrow’s global leaders. This milestone conference, themed “Sapientia Ad Actionem – From Wisdom to Action”, invites delegates to step into the roles of world leaders, tackle contemporary challenges, and craft inclusive, responsible, and impactful solutions inspired by the United Nations Sustainable Development Goals.",
@@ -74,8 +75,11 @@ export default function HomePage() {
       {/* 5. Contact Us: Secretariat Contacts */}
       <Collaborators />
 
-      {/* 6. Awards: Industry Recognition & Honors */}
+      {/* 6. Awards / Key Details */}
       <Awards />
+
+      {/* 7. Conference Venue & Location Map */}
+      <LocationSection />
     </>
   );
 }

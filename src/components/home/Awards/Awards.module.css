@@ -1,7 +1,9 @@
 .section {
   padding-top: var(--space-m);
-  padding-bottom: var(--space-section-large);
-  padding-inline: var(--space-page-inline);
+  padding-bottom: var(--space-2xl);
+  padding-inline: clamp(24px, 5vw, 80px);
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: var(--color-background);
 }
 
