@@ -55,6 +55,7 @@
   --content-max-width-wide: 900px;
   --content-max-width-full: 1920px;
   --space-gutter: var(--space-s-m);
+  --space-page-inline: var(--space-m);
   --max-container-width: calc(var(--content-max-width-full) + var(--space-gutter) * 2);
   --variable-radius: 14px;
   --navigation-height: 44px;
@@ -85,6 +86,7 @@
 /* Responsive Overrides */
 @media (min-width: 768px) {
   :root {
+    --space-page-inline: var(--space-l);
     --variable-radius: 16px;
     --space-section-large: 200px;
     --space-section-medium: var(--space-3xl);
