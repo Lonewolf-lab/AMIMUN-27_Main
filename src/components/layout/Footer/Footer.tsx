@@ -10,13 +10,7 @@ const FOOTER_NAV = [
   { label: "LinkedIn", href: "https://tinyurl.com/linkedin-amimun27" },
 ];
 
-const SUBURBS = [
-  "Amity University Noida",
-  "Sector-125",
-  "Hybrid Mode",
-  "Online + Offline",
-  "14 Committees",
-];
+
 
 export function Footer() {
   return (
@@ -101,6 +95,28 @@ export function Footer() {
                 Offline: ₹2000 | Online: ₹750 | Int: $15
               </p>
             </a>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Amity%20University%20Noida%20Sector%20125%20Noida%20201313"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.mapCard}
+              aria-label="Open Amity University Noida in Google Maps"
+            >
+              <div className={styles.mapFrame} aria-hidden="true">
+                <iframe
+                  src="https://www.google.com/maps?q=Amity+University+Noida+Sector+125+Noida+201313&output=embed"
+                  title="Amity University Noida location map"
+                  loading="lazy"
+                  tabIndex={-1}
+                />
+              </div>
+              <div className={styles.mapMeta}>
+                <span>Amity University Noida</span>
+                <span className={styles.mapAction}>Open in Google Maps ↗</span>
+              </div>
+            </a>
+
           </div>
         </div>
 
@@ -131,16 +147,7 @@ export function Footer() {
           </svg>
         </div>
 
-        <div className={styles.suburbSection}>
-          <span className={styles.suburbHeader}>Conference Highlights</span>
-          <div className={styles.suburbTags}>
-            {SUBURBS.map((suburb) => (
-              <span key={suburb} className={styles.suburbTag}>
-                {suburb}
-              </span>
-            ))}
-          </div>
-        </div>
+        
 
         <div className={styles.bottomBar}>
           <span>Amity International Model United Nations Secretariat</span>

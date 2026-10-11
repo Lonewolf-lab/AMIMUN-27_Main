@@ -81,6 +81,33 @@ export function Hero() {
 
   return (
     <section className={`${styles.hero} ${isRevealed ? styles.heroRevealed : ""}`}>
+      <div className={styles.globe} aria-hidden="true">
+        <svg viewBox="0 0 800 800" role="presentation">
+          <defs>
+            <clipPath id="hero-globe-clip">
+              <circle cx="400" cy="400" r="382" />
+            </clipPath>
+          </defs>
+          <circle className={styles.globeSurface} cx="400" cy="400" r="382" />
+          <g className={styles.globeGrid} clipPath="url(#hero-globe-clip)">
+            <ellipse cx="400" cy="400" rx="250" ry="382" />
+            <ellipse cx="400" cy="400" rx="125" ry="382" />
+            <ellipse cx="400" cy="400" rx="382" ry="250" />
+            <ellipse cx="400" cy="400" rx="382" ry="125" />
+            <path d="M18 400h764M38 300h724M38 500h724" />
+          </g>
+          <g className={styles.globeLand} clipPath="url(#hero-globe-clip)">
+            <path d="M135 215c34-42 78-62 124-67l35 20 21 37-26 26-33 3-29 27-47-9-29-20z" />
+            <path d="M278 351l38 18 20 48-18 55-29 44-19 72-28 42-20-51 13-70-21-51 29-42-12-36z" />
+            <path d="M410 207l45-24 58 13 33 29 55 14 36 38-28 28-47-6-24 26-49-7-28-35-42-17-15-34z" />
+            <path d="M432 320l53 5 31 36-13 44 23 45-22 74-42 48-31-22 5-60-26-43 19-48-19-38z" />
+            <path d="M592 515l51-10 51 30-14 37-52 18-45-22z" />
+            <path d="M704 300l34 20 17 42-30 18-28-26z" />
+          </g>
+          <circle className={styles.globeOutline} cx="400" cy="400" r="382" />
+        </svg>
+      </div>
+
       {/* Signature Blue Transition Overlay */}
       <div
         className={`${styles.overlay} ${isRevealed ? styles.overlayRevealed : ""}`}

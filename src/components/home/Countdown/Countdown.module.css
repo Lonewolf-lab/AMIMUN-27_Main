@@ -18,11 +18,19 @@
 }
 
 .header {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  padding: var(--space-s) var(--space-l);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-xs);
   text-align: center;
+  background-color: #e3b83f;
+  border: 1px solid rgba(7, 42, 99, 0.32);
+  border-radius: var(--variable-radius);
+  box-shadow: 0 10px 24px rgba(3, 20, 58, 0.24);
 }
 
 .header h2 {
@@ -55,13 +63,14 @@
   align-items: center;
   gap: var(--space-xs);
   padding: var(--space-l) var(--space-s);
-  background-color: rgba(17, 17, 17, 0.82);
-  border: 1px solid rgba(255, 255, 255, 0.34);
+  background-color: #0c388d;
+  border: 1px solid rgba(220, 183, 86, 0.68);
   border-radius: var(--variable-radius);
+  box-shadow: 0 12px 28px rgba(3, 20, 58, 0.3);
 }
 
 .value {
-  color: #ffffff;
+  color: #fffaf0;
   font-size: clamp(2.5rem, 7vw, 5.5rem);
   font-variant-numeric: tabular-nums;
   font-weight: 500;
@@ -69,7 +78,7 @@
 }
 
 .label {
-  color: rgba(255, 255, 255, 0.9);
+  color: #e2c777;
   font-size: var(--step--1);
   letter-spacing: 0.14em;
   text-transform: uppercase;

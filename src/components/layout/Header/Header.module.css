@@ -69,6 +69,7 @@
   height: 36px;
   object-fit: contain;
   display: block;
+  transform: scale(1.3);
 }
 
 .logoLink:hover {
