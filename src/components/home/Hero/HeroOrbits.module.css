@@ -1,0 +1,63 @@
+/* Layering inside the stage: back rings (0) < back items (1) < globe (2) < front rings / front items (3) */
+.orbits {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ringsBack,
+.ringsFront {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: rgba(44, 99, 214, 0.3);
+  stroke-width: 0.18;
+}
+
+.ringsBack {
+  z-index: 0;
+}
+
+.ringsFront {
+  z-index: 3;
+  stroke: rgba(44, 99, 214, 0.42);
+}
+
+.token,
+.dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  will-change: transform, opacity;
+}
+
+.token {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 10px 24px -10px rgba(7, 31, 85, 0.55), 0 0 0 1px rgba(44, 99, 214, 0.18);
+}
+
+.token img {
+  object-fit: contain;
+  padding: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle at 35% 35%, #ffffff, #2c63d6 70%);
+  box-shadow: 0 0 10px rgba(44, 99, 214, 0.55);
+}
+
+@media (max-width: 768px) {
+  .token {
+    width: 30px;
+    height: 30px;
+  }
+}

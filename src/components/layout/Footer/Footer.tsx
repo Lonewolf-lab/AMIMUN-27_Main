@@ -28,7 +28,7 @@ export function Footer() {
                 alt="Amity University Logo"
                 width={120}
                 height={50}
-                style={{ objectFit: "contain", height: "auto", maxWidth: "140px" }}
+                style={{ objectFit: "contain", width: "auto", height: "auto", maxWidth: "140px" }}
               />
             </Link>
             <p className={styles.brandDescription}>
@@ -142,7 +142,7 @@ export function Footer() {
               fontWeight="900"
               fontFamily="var(--font-suisse-intl), system-ui, sans-serif"
             >
-              AMIMUN'27
+              AMIMUN&apos;27
             </text>
           </svg>
         </div>

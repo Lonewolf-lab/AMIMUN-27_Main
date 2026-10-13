@@ -288,3 +288,9 @@
   }
 }
 
+
+@media (prefers-reduced-motion: reduce) {
+  .card { opacity: 1; transform: none !important; transition: none; }
+  .cardGlow { display: none; }
+  .exploreArrow { transition: none; }
+}

@@ -88,3 +88,94 @@ html.lenis, html.lenis body {
   pointer-events: none !important;
 }
 
+
+/* ── Scroll-driven motion utilities (CSS scroll timelines; static where unsupported) ── */
+@keyframes sdReveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 64px, 0) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --speed: positive drifts up faster than the page, negative lags behind */
+@keyframes sdParallax {
+  from {
+    transform: translate3d(0, calc(var(--speed, 0.2) * 140px), 0);
+  }
+  to {
+    transform: translate3d(0, calc(var(--speed, 0.2) * -140px), 0);
+  }
+}
+
+@keyframes sdProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.scroll-progress {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .sd-reveal {
+      animation: sdReveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 28%;
+    }
+
+    .sd-parallax {
+      animation: sdParallax linear both;
+      animation-timeline: view();
+      animation-range: cover;
+    }
+
+    .scroll-progress {
+      display: block;
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: 3px;
+      z-index: 100;
+      transform-origin: 0 50%;
+      background: linear-gradient(90deg, #071f55, #2c63d6 60%, #0a97d9);
+      animation: sdProgress linear both;
+      animation-timeline: scroll(root);
+      pointer-events: none;
+    }
+  }
+}
+
+/* GSAP takes ownership only after initialization; native CSS remains the fallback. */
+[data-scroll-motion="active"] .sd-reveal,
+[data-scroll-motion="active"] .sd-parallax,
+[data-scroll-motion="active"] .scroll-progress {
+  animation: none !important;
+}
+[data-scroll-motion="active"] [data-reveal],
+[data-scroll-motion="active"] [data-scroll-row] {
+  transition: none;
+  opacity: 1;
+  transform: none;
+}
+[data-scroll-motion="active"] .scroll-progress {
+  display: block;
+  position: fixed;
+  inset: 0 0 auto;
+  height: 3px;
+  z-index: 100;
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, #071f55, #2c63d6 60%, #0a97d9);
+  pointer-events: none;
+}
+
+/* Suspend decorative loops while their section is outside the viewport. */
+[data-motion-visibility="offscreen"] [data-ambient],
+[data-motion-visibility="offscreen"] [data-ambient] * { animation-play-state: paused !important; }

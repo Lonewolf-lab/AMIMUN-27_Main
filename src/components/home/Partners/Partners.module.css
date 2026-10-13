@@ -1,0 +1,126 @@
+.section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: var(--space-section-medium) var(--space-page-inline);
+  background: linear-gradient(180deg, var(--color-background) 0%, #d6e3fa 100%);
+  view-timeline-name: --partners;
+}
+
+.heading {
+  font-size: var(--step-6);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 0 auto var(--space-2xl);
+  text-align: center;
+  color: var(--c-blue-ink);
+  max-width: 18ch;
+}
+
+/* 3D plane: lies back like a floor, then stands up as the section scrolls in */
+.stage {
+  position: relative;
+  max-width: 1100px;
+  margin-inline: auto;
+  perspective: 1200px;
+}
+
+.plane {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-s-m);
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(12deg);
+}
+
+.tile {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--variable-radius);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 0 #fff inset, 0 16px 30px -18px rgba(12, 56, 141, 0.45);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), background 0.4s ease;
+}
+
+.tile img {
+  object-fit: contain;
+  padding: 16% 18%;
+  filter: grayscale(1) contrast(1.05);
+  opacity: 0.75;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+/* Micro-interaction: tile pops forward in 3D and regains colour */
+.tile:hover {
+  transform: translateZ(40px) translateY(-6px);
+  background: #fff;
+  box-shadow: 0 30px 50px -20px rgba(12, 56, 141, 0.55), 0 0 0 1px rgba(44, 99, 214, 0.35);
+}
+
+.tile:hover img {
+  filter: none;
+  opacity: 1;
+}
+
+.floor {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -60px;
+  height: 120px;
+  z-index: -1;
+  background: radial-gradient(closest-side, rgba(44, 99, 214, 0.35), transparent);
+  filter: blur(10px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .plane {
+      animation: standUp linear both;
+      animation-timeline: --partners;
+      animation-range: entry 0% cover 50%;
+    }
+
+    .tile {
+      animation: tileIn linear both;
+      animation-timeline: --partners;
+      animation-range: entry calc(var(--i) * 1%) cover calc(30% + var(--i) * 1%);
+    }
+  }
+}
+
+@keyframes standUp {
+  from {
+    transform: rotateX(62deg) translateY(60px) scale(0.92);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes tileIn {
+  from {
+    opacity: 0;
+    translate: 0 40px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .plane {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .plane {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

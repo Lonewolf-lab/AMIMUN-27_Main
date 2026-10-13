@@ -1,0 +1,9 @@
+/* Home-only blue tint: every section that paints var(--color-background) picks this up */
+.home {
+  --color-background: #edf2fb;
+  position: relative;
+  background:
+    radial-gradient(60% 40% at 100% 20%, rgba(44, 99, 214, 0.1), transparent 70%),
+    radial-gradient(50% 40% at 0% 60%, rgba(10, 151, 217, 0.08), transparent 70%),
+    var(--color-background);
+}
