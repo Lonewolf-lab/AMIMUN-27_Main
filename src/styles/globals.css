@@ -175,3 +175,7 @@ html.lenis, html.lenis body {
   background: linear-gradient(90deg, #071f55, #2c63d6 60%, #0a97d9);
   pointer-events: none;
 }
+
+/* Suspend decorative loops while their section is outside the viewport. */
+[data-motion-visibility="offscreen"] [data-ambient],
+[data-motion-visibility="offscreen"] [data-ambient] * { animation-play-state: paused !important; }
