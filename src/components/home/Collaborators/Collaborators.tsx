@@ -1,7 +1,4 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
-import { TextReveal } from "@/components/animations/TextReveal";
+import { Reveal } from "@/components/animations/Reveal";
 import styles from "./Collaborators.module.css";
 
 const CONTACT_MEMBERS = [
@@ -50,78 +47,31 @@ const CONTACT_MEMBERS = [
 ];
 
 export function Collaborators() {
-  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section className={styles.section} id="contact" ref={containerRef}>
+    <section className={styles.section} id="contact" aria-labelledby="contact-heading">
       <div className={styles.container}>
-        {/* Header Row */}
-        <div className={styles.header}>
-          <div className={styles.dotHeading}>
-            <span className={styles.dot} />
-            <TextReveal as="span" baseDelay={100}>
-              Contact Us
-            </TextReveal>
-          </div>
-          <h2 className={styles.mainTitle}>
-            For further information, get in touch with the Secretariat
-          </h2>
-          <p className={styles.description}>
-            Have questions regarding registrations, committee allotments, or logistics? Reach out directly to our executive leadership team.
-          </p>
-        </div>
-
-        {/* Contact Cards Grid with Fluid Scroll Reveal */}
-        <div className={`${styles.cardsGrid} ${isVisible ? styles.gridVisible : ""}`}>
-          {CONTACT_MEMBERS.map((member, idx) => {
-            const isHovered = hoveredIdx === idx;
-            return (
-              <a
-                key={member.name}
-                href={`tel:${member.rawPhone}`}
-                className={`${styles.contactCard} ${isHovered ? styles.cardHovered : ""}`}
-                onMouseEnter={() => setHoveredIdx(idx)}
-                onMouseLeave={() => setHoveredIdx(null)}
-                style={{ transitionDelay: `${idx * 0.08}s` }}
-              >
-                <div className={styles.cardHeader}>
-                  <span className={styles.editionTag}>{member.edition}</span>
-                  <span className={styles.arrowIcon} aria-hidden="true">
-                    ↗
-                  </span>
-                </div>
-
-                <div className={styles.cardBody}>
-                  <h3 className={styles.memberName}>{member.name}</h3>
+        <Reveal className={styles.header}>
+          <p className={styles.eyebrow}>MEET THE SECRETARIAT</p>
+          <h2 id="contact-heading" className={styles.mainTitle}>Questions?<br />Let&apos;s talk.</h2>
+          <p className={styles.description}>For registrations, committee allotments, or logistics, reach out to the team behind AMIMUN&apos;27.</p>
+          <span className={styles.headerRule} aria-hidden="true" />
+          <p className={styles.note}>Select a contact to call directly.</p>
+        </Reveal>
+        <ul className={styles.contacts} aria-label="Secretariat contacts">
+          {CONTACT_MEMBERS.map((member) => (
+            <Reveal as="li" key={member.rawPhone} className={styles.contactItem}>
+              <a href={`tel:${member.rawPhone}`} className={styles.contactCard} aria-label={`Call ${member.name}, ${member.role}, ${member.phone}`}>
+                <span className={styles.initials} aria-hidden="true">{member.name.split(" ").map(word => word[0]).slice(0, 2).join("")}</span>
+                <div className={styles.identity}>
                   <p className={styles.memberRole}>{member.role}</p>
-                </div>
-
-                <div className={styles.cardFooter}>
-                  <span className={styles.phoneLabel}>Direct Line</span>
+                  <h3 className={styles.memberName}>{member.name}</h3>
                   <span className={styles.phoneNumber}>{member.phone}</span>
                 </div>
+                <span className={styles.arrow} aria-hidden="true">↗</span>
               </a>
-            );
-          })}
-        </div>
+            </Reveal>
+          ))}
+        </ul>
       </div>
     </section>
   );

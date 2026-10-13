@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import styles from "./WhatYouLearn.module.css";
 
 const ITEMS = [
@@ -37,24 +36,6 @@ const ITEMS = [
 ];
 
 export function WhatYouLearn() {
-  const rowRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(styles.visible);
-          }
-        });
-      },
-      { threshold: 0.18 }
-    );
-
-    rowRefs.current.forEach((el) => el && observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section className={styles.section}>
       <div className={styles.header}>
@@ -63,11 +44,11 @@ export function WhatYouLearn() {
       </div>
 
       <div className={styles.list}>
-        {ITEMS.map((item, i) => (
+        {ITEMS.map((item) => (
           <div
             key={item.number}
-            ref={(el) => { rowRefs.current[i] = el; }}
-            className={`${styles.row} ${i % 2 === 0 ? styles.fromLeft : styles.fromRight}`}
+            data-scroll-row
+            className={styles.row}
           >
             <span className={styles.number}>{item.number}</span>
             <div className={styles.divider} />

@@ -1,0 +1,9 @@
+.map { position: relative; width: 100%; height: 100%; isolation: isolate; }
+.background { position: absolute; inset: 0; background: url('/closing-map.png') center -75px / 530px 430px no-repeat; mask-image: linear-gradient(to bottom, black 50%, transparent); opacity: .8; }
+.markers { position: absolute; inset: 0; }
+.marker { position: absolute; left: calc(50% + var(--offset)); width: 38px; height: 38px; filter: drop-shadow(0 5px 6px #0004); }
+.pin { position: absolute; width: 100%; height: 100%; }
+.avatar { position: absolute; top: 4px; left: 7px; width: 24px; height: 24px; border-radius: 50%; overflow: hidden; }
+.avatar img { object-fit: contain; padding: 2px; }
+.fade { position: absolute; inset: 0; background: linear-gradient(to bottom, #0b2249, transparent 38%); pointer-events: none; }
+@media (max-width: 380px) { .markers { scale: .85; transform-origin: 50% 40%; } .background { background-size: 450px 365px; } }

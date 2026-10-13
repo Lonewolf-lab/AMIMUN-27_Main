@@ -10,6 +10,30 @@
   --color-border: rgba(0, 0, 0, 0.1);
   --color-border-dark: rgba(255, 255, 255, 0.1);
 
+  /* AMIMUN Blue Scale & Gradients */
+  --c-blue: #0c388d;
+  --c-blue-ink: #04122f;
+  --c-blue-deep: #071f55;
+  --c-blue-bright: #2c63d6;
+  --c-blue-sky: #8db1f5;
+  --c-blue-mist: #e3ebfa;
+  --grad-ocean: linear-gradient(135deg, var(--c-blue-ink) 0%, var(--c-blue) 55%, var(--c-blue-bright) 100%);
+  --grad-dusk: linear-gradient(160deg, var(--c-blue-deep) 0%, var(--c-blue) 60%, #3d78e8 100%);
+  --grad-mist: linear-gradient(180deg, var(--c-blue-mist) 0%, rgba(227, 235, 250, 0) 100%);
+  --grad-mesh:
+    radial-gradient(60% 80% at 15% 20%, rgba(44, 99, 214, 0.55) 0%, transparent 60%),
+    radial-gradient(50% 70% at 85% 80%, rgba(141, 177, 245, 0.35) 0%, transparent 65%),
+    radial-gradient(40% 60% at 70% 10%, rgba(12, 56, 141, 0.9) 0%, transparent 70%),
+    var(--c-blue-ink);
+  --shadow-blue: 0 24px 60px -20px rgba(12, 56, 141, 0.45);
+
+  /* UN SDG-derived accent spectrum (theme is SDG-led). Decorative use only: glows, orbits. */
+  --sdg-blue: #0a97d9;
+  --sdg-teal: #26bde2;
+  --sdg-green: #56c02b;
+  --sdg-gold: #fcc30b;
+  --sdg-coral: #fd6925;
+
   /* Fluid Typography Scale */
   --step--2: clamp(0.6rem, 0.7126rem + -0.0908vw, 0.6914rem);
   --step--1: clamp(0.75rem, 0.7842rem + -0.0276vw, 0.7778rem);

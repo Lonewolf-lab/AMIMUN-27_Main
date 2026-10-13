@@ -1,7 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTilt } from "@/components/animations/useTilt";
 import styles from "./TestimonialQuote.module.css";
 
 const OPENING_QUOTE =
@@ -22,73 +25,57 @@ const BELOW_PARAGRAPHS = [
 
 export function TestimonialQuote() {
   const sectionRef = useRef<HTMLElement | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const portraitRef = useTilt<HTMLDivElement>(3);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-    return () => observer.disconnect();
+    gsap.registerPlugin(ScrollTrigger);
+    const media = gsap.matchMedia();
+    media.add("(prefers-reduced-motion: no-preference)", () => {
+      const element = sectionRef.current;
+      if (!element) return;
+      element.querySelectorAll<HTMLElement>("[data-message-reveal]").forEach((target) => {
+        gsap.fromTo(target, { opacity: 0, y: 22 }, {
+          opacity: 1, y: 0, duration: 0.9, ease: "power3.out",
+          scrollTrigger: { trigger: target, start: "top 94%", once: true }, clearProps: "transform,opacity",
+        });
+      });
+      gsap.fromTo(element.querySelector(`.${styles.progressFill}`), { scaleX: 0 }, {
+        scaleX: 1, ease: "none", scrollTrigger: { trigger: element, start: "top 25%", end: "bottom 80%", scrub: 0.5 },
+      });
+    });
+    return () => media.revert();
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className={`${styles.section} ${isVisible ? styles.visible : ""}`}
-    >
+    <section ref={sectionRef} className={styles.section} aria-labelledby="welcome-heading">
       <div className={styles.inner}>
-        <h2 className={styles.sectionHeading}>Welcome to AMIMUN&apos;27</h2>
-
-        {/* Top: image+name left, opening quote+first paras right */}
-        <div className={styles.top}>
-          <div className={styles.left}>
-            <div className={styles.photoWrap}>
-              <Image
-                src="/landing-page/Saksham-sg.jpeg"
-                alt="Saksham Shivashish — Secretary General, AMIMUN'27"
-                fill
-                sizes="(max-width: 768px) 100vw, 260px"
-                className={styles.photo}
-              />
+        <header className={styles.header}>
+          <p className={styles.eyebrow}>A MESSAGE FROM THE SECRETARY-GENERAL</p>
+          <h2 id="welcome-heading" className={styles.sectionHeading}>Welcome to<br />AMIMUN&apos;27.</h2>
+          <div className={styles.progress} aria-hidden="true"><span className={styles.progressFill} /></div>
+        </header>
+        <div className={styles.layout}>
+          <aside className={styles.portraitColumn} aria-label="Secretary-General">
+            <div data-message-reveal>
+              <div ref={portraitRef} className={styles.portraitTilt}>
+                <div className={styles.photoWrap}>
+                  <Image src="/landing-page/Saksham-sg.jpeg" alt="Saksham Shivashish — Secretary General, AMIMUN'27" fill sizes="(max-width: 767px) 80vw, 320px" className={styles.photo} />
+                  <span className={styles.photoBadge}>AMIMUN&apos;27 / SECRETARIAT</span>
+                </div>
+              </div>
+              <div className={styles.identity}>
+                <span className={styles.name}>Saksham Shivashish</span>
+                <span className={styles.designation}>Secretary-General</span>
+                <span className={styles.identityRule} aria-hidden="true" />
+                <p className={styles.motto}>Sapientia ad Actionem<br /><span>From wisdom to action.</span></p>
+              </div>
             </div>
-            <div className={styles.identity}>
-              <span className={styles.name}>Saksham Shivashish</span>
-              <span className={styles.designation}>
-                Secretary General, AMIMUN&apos;27
-              </span>
-            </div>
+          </aside>
+          <div className={styles.letter}>
+            <blockquote data-message-reveal className={styles.openingQuote}><span className={styles.quoteMark} aria-hidden="true">“</span><p>{OPENING_QUOTE}</p></blockquote>
+            {[...ALONGSIDE_PARAGRAPHS, ...BELOW_PARAGRAPHS].map((paragraph, index) => <p data-message-reveal key={index} className={`${styles.para} ${index === 0 ? styles.lead : ""}`}>{paragraph}</p>)}
+            <div data-message-reveal className={styles.signoff}><span>Saksham Shivashish</span><small>Secretary-General, AMIMUN&apos;27</small></div>
           </div>
-
-          <div className={styles.right}>
-            <p className={styles.openingQuote}>{OPENING_QUOTE}</p>
-            {ALONGSIDE_PARAGRAPHS.map((p, i) => (
-              <p key={i} className={styles.para}>
-                {p}
-              </p>
-            ))}
-          </div>
-        </div>
-
-        {/* Bottom: full-width continuation with staggered scroll reveals */}
-        <div className={styles.bottom}>
-          {BELOW_PARAGRAPHS.map((p, i) => (
-            <div
-              key={i}
-              className={styles.paraItem}
-              style={{ transitionDelay: `${0.3 + i * 0.12}s` }}
-            >
-              <p className={styles.para}>{p}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>

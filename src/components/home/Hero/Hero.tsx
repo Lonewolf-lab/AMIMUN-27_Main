@@ -1,35 +1,78 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+import Link from "next/link";
 import { TextReveal } from "@/components/animations/TextReveal";
+import { useMagnetic } from "@/components/animations/useMagnetic";
+import { HeroOrbits } from "./HeroOrbits";
 import styles from "./Hero.module.css";
 
-const AMIMUN_WORDMARK_SVG = (fillColor: string) => (
-  <svg
-    viewBox="0 0 1414 260"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={styles.logoSvg}
-    aria-label="AMIMUN'27"
-  >
-    <text
-      x="0"
-      y="230"
-      textLength="1414"
-      lengthAdjust="spacingAndGlyphs"
-      fill={fillColor}
-      stroke={fillColor}
-      strokeWidth="8"
-      strokeLinejoin="round"
-      fontSize="300"
-      fontWeight="900"
-      fontFamily="var(--font-suisse-intl), system-ui, sans-serif"
+const Globe = dynamic(() => import("@/components/ui/globe"), { ssr: false });
+
+/**
+ * AMIMUN'27 wordmark. The SVG viewBox is sized to the text's measured width
+ * (after the font loads) instead of forcing it with textLength, which Safari
+ * ignores and which clipped the "27".
+ */
+function Wordmark({ fill, gradient = false }: { fill: string; gradient?: boolean }) {
+  const textRef = useRef<SVGTextElement | null>(null);
+  const [viewBox, setViewBox] = useState("0 0 1414 260");
+  const gradientId = useId();
+
+  useEffect(() => {
+    let cancelled = false;
+    const fit = () => {
+      const text = textRef.current;
+      if (!text || cancelled) return;
+      const box = text.getBBox();
+      if (box.width > 0) setViewBox(`${box.x - 6} 0 ${box.width + 12} 260`);
+    };
+    fit();
+    document.fonts?.ready.then(fit);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const paint = gradient ? `url(#${gradientId})` : fill;
+
+  return (
+    <svg
+      viewBox={viewBox}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={styles.logoSvg}
+      aria-label="AMIMUN'27"
     >
-      AMIMUN&apos;27
-    </text>
-  </svg>
-);
+      {gradient && (
+        <defs>
+          <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#071f55" />
+            <stop offset="45%" stopColor="#0c388d" />
+            <stop offset="80%" stopColor="#2c63d6" />
+            <stop offset="100%" stopColor="#0a97d9" />
+          </linearGradient>
+        </defs>
+      )}
+      <text
+        ref={textRef}
+        x="0"
+        y="230"
+        fill={paint}
+        stroke={paint}
+        strokeWidth="8"
+        strokeLinejoin="round"
+        fontSize="300"
+        fontWeight="900"
+        fontFamily="var(--font-suisse-intl), system-ui, sans-serif"
+      >
+        AMIMUN&apos;27
+      </text>
+    </svg>
+  );
+}
 
 export function Hero() {
   const [lettersRising, setLettersRising] = useState(false);
@@ -37,6 +80,28 @@ export function Hero() {
   const [subheadingRevealed, setSubheadingRevealed] = useState(false);
   const [videoProgress, setVideoProgress] = useState(0);
   const videoSectionRef = useRef<HTMLDivElement | null>(null);
+  const heroRef = useRef<HTMLElement | null>(null);
+  const registerRef = useMagnetic<HTMLAnchorElement>(0.35);
+  const committeesRef = useMagnetic<HTMLAnchorElement>(0.25);
+
+  // Pointer parallax: writes --px / --py (-0.5..0.5) on the hero, no re-renders.
+  useEffect(() => {
+    const el = heroRef.current;
+    if (!el || window.matchMedia("(prefers-reduced-motion: reduce), (hover: none)").matches) return;
+    let frame = 0;
+    const onMove = (e: PointerEvent) => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        el.style.setProperty("--px", (e.clientX / window.innerWidth - 0.5).toFixed(3));
+        el.style.setProperty("--py", (e.clientY / window.innerHeight - 0.5).toFixed(3));
+      });
+    };
+    window.addEventListener("pointermove", onMove, { passive: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("pointermove", onMove);
+    };
+  }, []);
 
   useEffect(() => {
     const lettersTimer = setTimeout(() => setLettersRising(true), 900);
@@ -80,32 +145,15 @@ export function Hero() {
   const clipPathStyle = `inset(${verticalInset}% ${sideInset}% ${verticalInset}% ${sideInset}% round ${borderRadius}px)`;
 
   return (
-    <section className={`${styles.hero} ${isRevealed ? styles.heroRevealed : ""}`}>
-      <div className={styles.globe} aria-hidden="true">
-        <svg viewBox="0 0 800 800" role="presentation">
-          <defs>
-            <clipPath id="hero-globe-clip">
-              <circle cx="400" cy="400" r="382" />
-            </clipPath>
-          </defs>
-          <circle className={styles.globeSurface} cx="400" cy="400" r="382" />
-          <g className={styles.globeGrid} clipPath="url(#hero-globe-clip)">
-            <ellipse cx="400" cy="400" rx="250" ry="382" />
-            <ellipse cx="400" cy="400" rx="125" ry="382" />
-            <ellipse cx="400" cy="400" rx="382" ry="250" />
-            <ellipse cx="400" cy="400" rx="382" ry="125" />
-            <path d="M18 400h764M38 300h724M38 500h724" />
-          </g>
-          <g className={styles.globeLand} clipPath="url(#hero-globe-clip)">
-            <path d="M135 215c34-42 78-62 124-67l35 20 21 37-26 26-33 3-29 27-47-9-29-20z" />
-            <path d="M278 351l38 18 20 48-18 55-29 44-19 72-28 42-20-51 13-70-21-51 29-42-12-36z" />
-            <path d="M410 207l45-24 58 13 33 29 55 14 36 38-28 28-47-6-24 26-49-7-28-35-42-17-15-34z" />
-            <path d="M432 320l53 5 31 36-13 44 23 45-22 74-42 48-31-22 5-60-26-43 19-48-19-38z" />
-            <path d="M592 515l51-10 51 30-14 37-52 18-45-22z" />
-            <path d="M704 300l34 20 17 42-30 18-28-26z" />
-          </g>
-          <circle className={styles.globeOutline} cx="400" cy="400" r="382" />
-        </svg>
+    <section ref={heroRef} className={`${styles.hero} ${isRevealed ? styles.heroRevealed : ""}`}>
+      {/* 3D stage: draggable globe + orbiting committee rings */}
+      <div className={styles.stage} aria-hidden="true">
+        <div className={styles.stageInner}>
+          <div className={styles.globeLayer}>
+            <Globe />
+          </div>
+          <HeroOrbits />
+        </div>
       </div>
 
       {/* Signature Blue Transition Overlay */}
@@ -124,22 +172,36 @@ export function Hero() {
               lettersRising ? styles.lettersRising : ""
             }`}
           >
-            {AMIMUN_WORDMARK_SVG("#ffffff")}
+            <Wordmark fill="#ffffff" />
           </div>
-          <p className={styles.taglineCentered} style={{ opacity: 0 }}>
-            Where diplomacy, dialogue, and discipline meet to shape tomorrow&apos;s global leaders.
-          </p>
+          <div className={styles.subheading} style={{ visibility: "hidden" }}>
+            <span>15-17 JANUARY 2027</span>
+          </div>
         </div>
       </div>
 
       {/* Sticky Main Hero Content & Wordmark */}
       <div className={styles.contentGrid}>
         <div className={styles.topSpacing}>
-          <p className={styles.themeSubheading}>
-            <TextReveal as="span" baseDelay={300}>
-              Sapientia Ad Actionem
-            </TextReveal>
-          </p>
+          <div className={styles.intro}>
+            <p className={styles.themeSubheading}>
+              <TextReveal as="span" baseDelay={300}>
+                Sapientia Ad Actionem
+              </TextReveal>
+            </p>
+            <p className={`${styles.tagline} ${subheadingRevealed ? styles.subheadingRevealed : ""}`}>
+              Where diplomacy, dialogue, and discipline meet to shape tomorrow&apos;s global leaders.
+            </p>
+            <div className={`${styles.actions} ${subheadingRevealed ? styles.subheadingRevealed : ""}`}>
+              <a ref={registerRef} href="#register" className={styles.primary}>
+                Register
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+              <Link ref={committeesRef} href="/committees" className={styles.secondary}>
+                View committees
+              </Link>
+            </div>
+          </div>
         </div>
 
         <div
@@ -147,23 +209,15 @@ export function Hero() {
             lettersRising ? styles.lettersRising : ""
           }`}
         >
-          {AMIMUN_WORDMARK_SVG("#0c388d")}
+          <Wordmark fill="#0c388d" />
         </div>
-
-        <p
-          className={`${styles.taglineCentered} ${
-            subheadingRevealed ? styles.subheadingRevealed : ""
-          }`}
-        >
-          Where diplomacy, dialogue, and discipline meet to shape tomorrow&apos;s global leaders.
-        </p>
 
         <div
           className={`${styles.subheading} ${
             subheadingRevealed ? styles.subheadingRevealed : ""
           }`}
         >
-          <span>15&ndash;17 JANUARY 2027</span>
+          <span>15-17 JANUARY 2027</span>
           <span>AMITY UNIVERSITY, NOIDA</span>
         </div>
       </div>

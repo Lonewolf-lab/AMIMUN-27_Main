@@ -1,0 +1,219 @@
+.section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: var(--space-section-medium) var(--space-page-inline);
+  background: linear-gradient(180deg, var(--color-background) 0%, var(--c-blue-mist) 45%, var(--color-background) 100%);
+}
+
+/* Slow layered gradient waves */
+.waves {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.waves span {
+  position: absolute;
+  left: -25%;
+  width: 150%;
+  height: 60%;
+  top: 30%;
+  border-radius: 45%;
+  background: linear-gradient(90deg, rgba(44, 99, 214, 0.14), rgba(141, 177, 245, 0.22), rgba(12, 56, 141, 0.1));
+  animation: wave 22s linear infinite;
+}
+
+.waves span:nth-child(2) {
+  top: 38%;
+  animation-duration: 30s;
+  animation-direction: reverse;
+  opacity: 0.7;
+}
+
+.waves span:nth-child(3) {
+  top: 46%;
+  animation-duration: 38s;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header {
+  max-width: var(--max-container-width);
+  margin: 0 auto var(--space-2xl);
+}
+
+.heading {
+  font-size: var(--step-7);
+  letter-spacing: -0.045em;
+  line-height: 1;
+  margin: 0 0 var(--space-s);
+  color: var(--c-blue-ink);
+}
+
+.sub {
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: #3a4566;
+  max-width: 48ch;
+  margin: 0;
+}
+
+.grid {
+  max-width: var(--max-container-width);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: var(--space-s-m);
+  align-items: stretch;
+}
+
+.tierWrap {
+  display: flex;
+}
+
+.tier {
+  --rx: 0deg;
+  --ry: 0deg;
+  --mx: 50%;
+  --my: 50%;
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  padding: var(--space-l);
+  min-height: 320px;
+  border-radius: var(--variable-radius);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--c-blue-ink);
+  text-decoration: none;
+  transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry));
+  transition: transform 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset, 0 12px 30px -18px rgba(12, 56, 141, 0.35);
+}
+
+/* Spotlight border following the cursor */
+.tier::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background:
+    radial-gradient(260px circle at var(--mx) var(--my), var(--c-blue-bright), transparent 60%),
+    rgba(12, 56, 141, 0.14);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.tier:hover {
+  box-shadow: var(--shadow-blue);
+}
+
+.tier:active {
+  transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry)) scale(0.985);
+}
+
+.tier:focus-visible {
+  outline: 2px solid var(--c-blue-bright);
+  outline-offset: 4px;
+}
+
+.featured {
+  background: var(--grad-dusk);
+  color: #f4f7ff;
+}
+
+.featured::before {
+  background:
+    radial-gradient(260px circle at var(--mx) var(--my), #ffffff, transparent 60%),
+    rgba(255, 255, 255, 0.2);
+}
+
+.name {
+  font-size: var(--step-1);
+  letter-spacing: -0.01em;
+}
+
+.price {
+  font-size: var(--step-7);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin-top: auto;
+}
+
+.note {
+  font-size: var(--step-0);
+  line-height: 1.5;
+  color: #3a4566;
+}
+
+.featured .note {
+  color: rgba(244, 247, 255, 0.85);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-s);
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--c-blue);
+  color: #fff;
+  font-size: var(--step-0);
+  white-space: nowrap;
+  transition: background var(--transition-quick);
+}
+
+.cta span {
+  transition: transform var(--transition);
+}
+
+.tier:hover .cta span {
+  transform: translateX(4px);
+}
+
+.featured .cta {
+  background: #ffffff;
+  color: var(--c-blue-ink);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tier {
+    min-height: 0;
+  }
+
+  .price {
+    margin-top: var(--space-xs);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .waves span {
+    animation: none;
+  }
+
+  .tier {
+    transition: none;
+  }
+}
