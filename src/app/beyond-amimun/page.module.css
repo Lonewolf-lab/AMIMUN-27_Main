@@ -400,11 +400,307 @@
   margin: 0;
 }
 
+/* ── Club Foundation 4-Column Architecture Grid ── */
+.pillarsOverviewSection {
+  max-width: 1200px;
+  margin: var(--space-4xl) auto var(--space-2xl);
+  padding-inline: clamp(24px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.overviewHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.overviewTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-4);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.overviewDesc {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.pillarFeatureCard {
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: var(--space-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.pillarFeatureCard:hover {
+  transform: translateY(-6px);
+  border-color: #0c388d;
+  box-shadow: 0 16px 36px rgba(12, 56, 141, 0.1);
+}
+
+.pillarTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pillarIndex {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-2);
+  font-weight: 800;
+  color: #0c388d;
+}
+
+.pillarBadge {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--2);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #0c388d;
+  background: rgba(12, 56, 141, 0.06);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.pillarTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-1);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.pillarSub {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: #0c388d;
+  margin: 0;
+}
+
+.pillarBody {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── Delegate Preparation Process Stepper Roadmap ── */
+.roadmapSection {
+  max-width: 1200px;
+  margin: var(--space-4xl) auto;
+  padding-inline: clamp(24px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.roadmapHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.roadmapTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-4);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.roadmapDesc {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.roadmapGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.stepCard {
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: var(--space-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-6px);
+  border-color: #0c388d;
+  box-shadow: 0 16px 36px rgba(12, 56, 141, 0.1);
+}
+
+.stepTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stepPhase {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  font-weight: 800;
+  color: #0c388d;
+}
+
+.stepFreq {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.stepTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.stepSubtitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--2);
+  font-weight: 600;
+  color: #0c388d;
+  margin: 0;
+}
+
+.stepDesc {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── Club Joining CTA ────────────────────────────── */
+.clubCtaSection {
+  max-width: 1200px;
+  margin: var(--space-3xl) auto 0;
+  padding-inline: clamp(24px, 4vw, 48px);
+}
+
+.clubCtaCard {
+  background: #0c388d;
+  color: #ffffff;
+  border-radius: 24px;
+  padding: clamp(32px, 5vw, 64px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2xl);
+  box-shadow: 0 20px 48px rgba(12, 56, 141, 0.25);
+}
+
+.clubCtaLeft {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  max-width: 650px;
+}
+
+.clubCtaTag {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+.clubCtaTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0;
+}
+
+.clubCtaText {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.clubCtaRight {
+  flex-shrink: 0;
+}
+
+.clubPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #0c388d;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.clubPrimaryBtn:hover {
+  transform: translateY(-2px);
+  background-color: #f7f6f2;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .heroGrid {
     grid-template-columns: 1fr;
     gap: var(--space-l);
+  }
+
+  .pillarsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .roadmapGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .horizontalHeader {
@@ -416,9 +712,22 @@
   .collabGrid {
     grid-template-columns: 1fr;
   }
+
+  .clubCtaCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 640px) {
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmapGrid {
+    grid-template-columns: 1fr;
+  }
+
   .trainCard {
     width: 85vw;
     padding: var(--space-l);

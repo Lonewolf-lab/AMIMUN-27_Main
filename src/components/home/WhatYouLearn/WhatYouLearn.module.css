@@ -1,162 +1,296 @@
 .section {
-  padding-top: var(--space-l);
-  padding-bottom: var(--space-section-large);
-  padding-inline: var(--space-gutter);
+  position: relative;
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-4xl);
+  padding-inline: clamp(24px, 5vw, 80px);
   background-color: var(--color-background);
   overflow: hidden;
 }
 
+/* Subtle luxury accent background ambient light */
+.bgGlow {
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(12, 56, 141, 0.05) 0%, rgba(12, 56, 141, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
 /* ── Header ─────────────────────────────────────── */
 .header {
-  max-width: var(--content-max-width-wide);
-  margin-inline: auto;
   margin-bottom: var(--space-3xl);
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
 }
 
+.badgeWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: var(--space-2xs);
+}
+
+.badgeDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #0c388d;
+  box-shadow: 0 0 8px rgba(12, 56, 141, 0.4);
+}
+
 .eyebrow {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
   font-size: var(--step--1);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--c-blue, #0c388d);
+  color: #0c388d;
+  font-weight: 600;
   margin: 0;
 }
 
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+
 .heading {
-  font-size: var(--step-5);
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.1;
   color: var(--color-text-primary);
   margin: 0;
 }
 
-/* ── Rows ────────────────────────────────────────── */
-.list {
-  max-width: var(--content-max-width-wide);
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.row {
-  display: grid;
-  grid-template-columns: 3rem 1px 1fr;
-  gap: 0 var(--space-l);
-  align-items: start;
-  padding-block: var(--space-xl);
-  border-bottom: 1px solid var(--color-border);
-
-  /* slide-in starting states */
-  will-change: transform, opacity;
-  transition:
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity   0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.row:first-child {
-  border-top: 1px solid var(--color-border);
-}
-
-/* from left: starts off-screen left */
-.fromLeft {
-  transform: translateX(-90px);
-  opacity: 0;
-}
-
-/* from right: starts off-screen right */
-.fromRight {
-  transform: translateX(90px);
-  opacity: 0;
-}
-
-/* triggered by IntersectionObserver */
-.visible {
-  transform: translateX(0) !important;
-  opacity: 1 !important;
-}
-
-/* ── Cells ───────────────────────────────────────── */
-.number {
+.headerSubtitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
   font-size: var(--step-0);
-  letter-spacing: 0.04em;
+  line-height: 1.65;
   color: var(--color-text-secondary);
-  padding-top: 4px;
-  font-variant-numeric: tabular-nums;
+  max-width: 44ch;
+  margin: 0;
 }
 
-.divider {
-  width: 1px;
-  background-color: var(--color-border);
-  align-self: stretch;
+/* ── Grid ────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 2.5vw, 32px);
 }
 
-.content {
+.card {
+  position: relative;
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: 20px;
+  padding: var(--space-xl);
   display: flex;
   flex-direction: column;
-  gap: var(--space-s);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+  cursor: pointer;
+
+  /* Staggered entrance transition */
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--index) * 0.08s),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--index) * 0.08s),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(12, 56, 141, 0.4);
+  box-shadow: 0 16px 40px rgba(12, 56, 141, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.card:hover.visible {
+  transform: translateY(-8px) scale(1.01) !important;
+}
+
+/* Cursor dynamic glow on hover */
+.cardGlow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(12, 56, 141, 0.08) 0%, rgba(12, 56, 141, 0) 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+}
+
+.cardContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  height: 100%;
+  z-index: 2;
+}
+
+/* ── Card Top Header ────────────────────────────── */
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--space-s);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.iconWrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(12, 56, 141, 0.06);
+  color: #0c388d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .iconWrapper {
+  transform: scale(1.1) rotate(4deg);
+  background-color: #0c388d;
+  color: #ffffff;
+}
+
+.tagWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.numberBadge {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  font-weight: 800;
+  color: #0c388d;
+}
+
+.tagText {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--2);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+/* ── Typography & Description ───────────────────── */
 .title {
-  font-size: var(--step-2);
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-1);
+  font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--color-text-primary);
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+.card:hover .title {
+  color: #0c388d;
 }
 
 .body {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
   font-size: var(--step-0);
-  line-height: 1.7;
+  line-height: 1.65;
   color: var(--color-text-secondary);
-  max-width: 60ch;
   margin: 0;
+  flex-grow: 1;
 }
 
-@media (min-width: 768px) {
-  .row {
-    grid-template-columns: 4rem 1px 1fr;
+/* ── Card Footer with Micro-arrow ───────────────── */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-s);
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.exploreText {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--2);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.exploreArrow {
+  color: #0c388d;
+  font-size: var(--step-0);
+  transform: translateX(0);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card:hover .exploreText {
+  color: #0c388d;
+}
+
+.card:hover .exploreArrow {
+  transform: translateX(6px);
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
 
-  .fromLeft  { transform: translateX(-140px); }
-  .fromRight { transform: translateX(140px); }
+  .titleRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-s);
+  }
+
+  .card {
+    padding: var(--space-l);
+  }
 }
 
-/* ── Hover micro-interaction: blue sweep + title nudge ── */
-.row {
-  position: relative;
-  isolation: isolate;
-  border-radius: 12px;
-}
 
-.row::before {
-  content: "";
-  position: absolute;
-  inset: 0 calc(var(--space-m) * -1);
-  z-index: -1;
-  border-radius: inherit;
-  background: linear-gradient(90deg, rgba(44, 99, 214, 0.14), rgba(10, 151, 217, 0.04) 70%, transparent);
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  transition: transform 0.6s var(--ease-out);
-}
-
-.row:hover::before {
-  transform: scaleX(1);
-}
-
-.number,
-.title {
-  transition: color 0.3s ease, transform 0.5s var(--ease-out);
-}
-
-.row:hover .number {
-  color: var(--c-blue-bright);
-  transform: scale(1.25);
-}
-
-.row:hover .title {
-  color: var(--c-blue);
-  transform: translateX(8px);
+@media (prefers-reduced-motion: reduce) {
+  .card { opacity: 1; transform: none !important; transition: none; }
+  .cardGlow { display: none; }
+  .exploreArrow { transition: none; }
 }

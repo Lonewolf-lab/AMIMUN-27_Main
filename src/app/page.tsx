@@ -7,6 +7,7 @@ import { TestimonialQuote } from "@/components/home/TestimonialQuote/Testimonial
 import { WhatYouLearn } from "@/components/home/WhatYouLearn/WhatYouLearn";
 import { CommitteeDeck } from "@/components/home/CommitteeDeck/CommitteeDeck";
 import { Registration } from "@/components/home/Registration/Registration";
+import { LocationSection } from "@/components/home/LocationSection/LocationSection";
 import { Awards } from "@/components/home/Awards/Awards";
 import { Collaborators } from "@/components/home/Collaborators/Collaborators";
 import { FinalCTA } from "@/components/home/FinalCTA/FinalCTA";
@@ -56,6 +57,9 @@ export default function HomePage() {
 
       {/* Event details */}
       <Awards />
+
+      {/* Venue map from the latest main branch */}
+      <LocationSection />
 
       {/* Secretariat contacts */}
       <Collaborators />

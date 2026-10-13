@@ -101,6 +101,62 @@
   font-weight: 600;
 }
 
+/* ── Impact Stats Milestone Grid ────────────────── */
+.statsSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: clamp(24px, 4vw, 48px);
+  padding-top: var(--space-2xl);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.statCard {
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: var(--space-l);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  border-color: #0c388d;
+  box-shadow: 0 12px 28px rgba(12, 56, 141, 0.08);
+}
+
+.statNumber {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-4);
+  font-weight: 800;
+  color: #0c388d;
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 6px 0 0;
+}
+
+.statSub {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--2);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
 /* ── Sticky Pillars Section with Stacking Parallax Overlap ── */
 .pillarsSection {
   width: 100%;
@@ -148,6 +204,33 @@
   margin: 0;
 }
 
+.pillarIndicatorBox {
+  margin-top: var(--space-xs);
+  padding: 12px 16px;
+  background: rgba(12, 56, 141, 0.05);
+  border-left: 3px solid #0c388d;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.indicatorLabel {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.indicatorActive {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  font-weight: 700;
+  color: #0c388d;
+}
+
 /* Right Stack of Pillar Cards with Overlapping Parallax Stacking */
 .pillarList {
   display: flex;
@@ -171,6 +254,11 @@
   transition: transform 0.3s var(--ease),
               box-shadow 0.3s var(--ease),
               border-color 0.3s var(--ease);
+}
+
+.activeCard {
+  border-color: #0c388d;
+  box-shadow: 0 -10px 30px rgba(12, 56, 141, 0.1), 0 20px 48px rgba(12, 56, 141, 0.15);
 }
 
 .pillarCard:last-child {
@@ -202,7 +290,11 @@
   font-size: var(--step--2);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-text-secondary);
+  color: #0c388d;
+  background: rgba(12, 56, 141, 0.06);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
 .cardTitle {
@@ -218,6 +310,85 @@
   font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
   font-size: var(--step-0);
   line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── Delegate Experience Framework ──────────────── */
+.experienceSection {
+  max-width: 1200px;
+  margin: var(--space-3xl) auto;
+  padding-inline: clamp(24px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.experienceHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.experienceTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-4);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.experienceDesc {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.experienceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-l);
+}
+
+.experienceCard {
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.experienceCard:hover {
+  transform: translateY(-6px);
+  border-color: #0c388d;
+  box-shadow: 0 16px 36px rgba(12, 56, 141, 0.1);
+}
+
+.expIndex {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-2);
+  font-weight: 800;
+  color: #0c388d;
+}
+
+.expTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-1);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.expText {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  line-height: 1.65;
   color: var(--color-text-secondary);
   margin: 0;
 }
@@ -238,7 +409,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: var(--space-l);
+  gap: var(--space-m);
 }
 
 .visionTag {
@@ -261,6 +432,15 @@
   line-height: 1.1;
   color: #ffffff;
   margin: 0;
+}
+
+.visionSubheading {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
 }
 
 .visionText {
@@ -298,6 +478,13 @@
   margin: 0;
 }
 
+.valuesSubtitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
 .valuesGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -306,7 +493,7 @@
 
 .valueCard {
   background: #ffffff;
-  border: 1px solid var(--color-border);
+  border: 1.5px solid var(--color-border);
   border-radius: 16px;
   padding: var(--space-l);
   display: flex;
@@ -319,9 +506,15 @@
 }
 
 .valueCard:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   border-color: #0c388d;
   box-shadow: 0 16px 32px rgba(12, 56, 141, 0.1);
+}
+
+.valTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .valNumber {
@@ -329,6 +522,15 @@
   font-size: var(--step-1);
   font-weight: 800;
   color: #0c388d;
+}
+
+.valCategory {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--2);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-weight: 600;
 }
 
 .valTitle {
@@ -348,11 +550,348 @@
   margin: 0;
 }
 
+/* ── 16-Year Evolution Timeline Roadmap ─────────── */
+.timelineSection {
+  max-width: 1200px;
+  margin: var(--space-4xl) auto;
+  padding-inline: clamp(24px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.timelineHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.timelineTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-4);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.timelineDesc {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.timelineTrack {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+  position: relative;
+}
+
+.timelineNode {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.nodeMarker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 2px solid rgba(12, 56, 141, 0.2);
+  padding-bottom: var(--space-xs);
+}
+
+.nodeDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #0c388d;
+}
+
+.nodeYear {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-2);
+  font-weight: 800;
+  color: #0c388d;
+}
+
+.nodeCard {
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: 16px;
+  padding: var(--space-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  height: 100%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nodeCard:hover {
+  transform: translateY(-5px);
+  border-color: #0c388d;
+  box-shadow: 0 16px 32px rgba(12, 56, 141, 0.1);
+}
+
+.nodeTag {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0c388d;
+  font-weight: 600;
+}
+
+.nodeTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.nodeText {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── Frequently Asked Questions Accordion ───────── */
+.faqSection {
+  max-width: 1200px;
+  margin: var(--space-4xl) auto;
+  padding-inline: clamp(24px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.faqHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.faqTitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-4);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.faqDesc {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.faqItem {
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: 16px;
+  padding: var(--space-l);
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faqItem:hover {
+  border-color: rgba(12, 56, 141, 0.4);
+}
+
+.faqOpen {
+  border-color: #0c388d;
+  box-shadow: 0 10px 24px rgba(12, 56, 141, 0.06);
+}
+
+.faqQuestionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-m);
+}
+
+.faqQuestionLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.faqCategory {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0c388d;
+  font-weight: 600;
+}
+
+.faqQuestion {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-1);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.faqToggleIcon {
+  font-size: var(--step-2);
+  font-weight: 400;
+  color: #0c388d;
+  line-height: 1;
+}
+
+.faqAnswerWrapper {
+  margin-top: var(--space-m);
+  padding-top: var(--space-m);
+  border-top: 1px solid var(--color-border);
+}
+
+.faqAnswer {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── Registration Callout Banner ─────────────────── */
+.ctaSection {
+  max-width: 1200px;
+  margin: var(--space-3xl) auto 0;
+  padding-inline: clamp(24px, 4vw, 48px);
+}
+
+.ctaCard {
+  background: #0c388d;
+  color: #ffffff;
+  border-radius: 24px;
+  padding: clamp(32px, 5vw, 64px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2xl);
+  box-shadow: 0 20px 48px rgba(12, 56, 141, 0.25);
+}
+
+.ctaLeft {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  max-width: 650px;
+}
+
+.ctaTag {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+.ctaHeading {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0;
+}
+
+.ctaSubtitle {
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.ctaActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  flex-shrink: 0;
+}
+
+.ctaPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #0c388d;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.ctaPrimaryBtn:hover {
+  transform: translateY(-2px);
+  background-color: #f7f6f2;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.ctaSecondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-family: var(--font-suisse, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--step--1);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.ctaSecondaryBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .heroGrid {
     grid-template-columns: 1fr;
     gap: var(--space-l);
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timelineTrack {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experienceGrid {
+    grid-template-columns: 1fr;
   }
 
   .pillarsSection {
@@ -367,9 +906,27 @@
   .valuesGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .ctaCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ctaActions {
+    width: 100%;
+    flex-direction: row;
+  }
 }
 
 @media (max-width: 640px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineTrack {
+    grid-template-columns: 1fr;
+  }
+
   .valuesGrid {
     grid-template-columns: 1fr;
   }
@@ -377,4 +934,9 @@
   .pillarCard {
     padding: var(--space-l);
   }
+
+  .ctaActions {
+    flex-direction: column;
+  }
 }
+

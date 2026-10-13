@@ -88,6 +88,31 @@ export default function BeyondAmimunPage() {
         </div>
       </section>
 
+      {/* Club Foundation 4-Column Architecture Grid */}
+      <section className={styles.pillarsOverviewSection}>
+        <div className={styles.overviewHeader}>
+          <span className={styles.sectionLabel}>The Club Ecosystem</span>
+          <h2 className={styles.overviewTitle}>Nurturing Tomorrow&apos;s Diplomats</h2>
+          <p className={styles.overviewDesc}>
+            How the AMIMUN student body creates a sustainable framework for leadership, research, and international policy dialogue.
+          </p>
+        </div>
+
+        <div className={styles.pillarsGrid}>
+          {BEYOND_AMIMUN_DATA.clubPillars.map((pillar, i) => (
+            <div key={i} className={styles.pillarFeatureCard}>
+              <div className={styles.pillarTop}>
+                <span className={styles.pillarIndex}>0{i + 1}</span>
+                <span className={styles.pillarBadge}>{pillar.highlight}</span>
+              </div>
+              <h3 className={styles.pillarTitle}>{pillar.title}</h3>
+              <p className={styles.pillarSub}>{pillar.subtitle}</p>
+              <p className={styles.pillarBody}>{pillar.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Pinned Horizontal Train Track Initiatives Section */}
       <section ref={horizontalSectionRef} className={styles.horizontalPinnedWrapper} id="initiatives">
         <div className={styles.horizontalStickyViewport}>
@@ -132,6 +157,31 @@ export default function BeyondAmimunPage() {
         </div>
       </section>
 
+      {/* Delegate Preparation Process Stepper Roadmap */}
+      <section className={styles.roadmapSection}>
+        <div className={styles.roadmapHeader}>
+          <span className={styles.sectionLabel}>Preparation Methodology</span>
+          <h2 className={styles.roadmapTitle}>How We Walk You Through The Journey</h2>
+          <p className={styles.roadmapDesc}>
+            From the moment you register to the final vote in committee, our student body guides every step of your preparation.
+          </p>
+        </div>
+
+        <div className={styles.roadmapGrid}>
+          {BEYOND_AMIMUN_DATA.delegatePreparationRoadmap.map((step, idx) => (
+            <div key={step.step} className={styles.stepCard}>
+              <div className={styles.stepTop}>
+                <span className={styles.stepPhase}>{step.step}</span>
+                <span className={styles.stepFreq}>{step.frequency}</span>
+              </div>
+              <h3 className={styles.stepTitle}>{step.title}</h3>
+              <p className={styles.stepSubtitle}>{step.subtitle}</p>
+              <p className={styles.stepDesc}>{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Prestigious Collaborations Grid */}
       <section className={styles.collabSection} id="collaborations">
         <div className={styles.collabHeader}>
@@ -153,6 +203,30 @@ export default function BeyondAmimunPage() {
               <p className={styles.collabDetail}>{collab.desc}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Club Joining CTA */}
+      <section className={styles.clubCtaSection}>
+        <div className={styles.clubCtaCard}>
+          <div className={styles.clubCtaLeft}>
+            <span className={styles.clubCtaTag}>Join The AMIMUN Fraternity</span>
+            <h2 className={styles.clubCtaTitle}>Ready to Represent, Negotiate & Lead?</h2>
+            <p className={styles.clubCtaText}>
+              Whether you are an aspiring diplomat or a seasoned speaker, become part of Amity University&apos;s flagship student-led conference.
+            </p>
+          </div>
+          <div className={styles.clubCtaRight}>
+            <a
+              href="https://tinyurl.com/DelegateForm-amimun27"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.clubPrimaryBtn}
+            >
+              <span>Register as a Delegate</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
       </section>
     </div>
