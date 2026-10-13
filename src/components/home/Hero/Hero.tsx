@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { TextReveal } from "@/components/animations/TextReveal";
@@ -234,11 +233,14 @@ export function Hero() {
             }}
           >
             <figure className={styles.mediaFigure}>
-              <Image
-                src="/videos/amity-photo.jpg?v=20260922"
-                alt="Amity University campus"
-                fill
-                sizes="100vw"
+              <video
+                src="/videos/Amimun'27%20Teaser.mp4"
+                poster="/videos/amity-photo.jpg"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
                 className={styles.heroVideo}
               />
             </figure>
