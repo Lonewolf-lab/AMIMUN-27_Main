@@ -49,9 +49,9 @@ Sagar Chamarti`,
   },
 
   {
-    name: "Jay Yadav",
-    role: "Director General, AMIMUN'25",
-    image: "/advisory-board/jay-yadav.jpg",
+    name: "Debanjan Dasgupta",
+    role: "Chief Mediator",
+    image: "/advisory-board/debanjan-dasgupta.JPEG",
     bio: `Dear AMIMUN Delegates,
 
 Each year, AMIMUN evolves into something greater than a conference — it becomes a space where young minds come together with the intention to understand, question, and shape the world around them. What truly defines AMIMUN is not only the enthusiasm for diplomacy or the pursuit of global awareness, but the willingness of its delegates to rethink perspectives, approach challenges with openness, and imagine solutions grounded in empathy and clarity. Being part of this journey has been an honour, and witnessing its steady growth has been deeply inspiring.
@@ -61,13 +61,13 @@ As you enter AMIMUN'27, I encourage you to value the strength of dialogue. It is
 With every speech you deliver and every resolution you craft, remember that you are contributing to a legacy built on responsibility, unity, and disciplined effort. AMIMUN'27 invites you to embody its theme — to let discipline guide your ideas, refine your approach, and elevate your impact. May this conference remind you that the future is not something we simply anticipate, but something we actively build through intention and collaboration.
 
 Warm Regards,
-Jai Yadav`,
+Debanjan Dasgupta`,
   },
 
   {
-    name: "Amishi Arora",
+    name: "Abhijeet Singh",
     role: "Chief Advisor",
-    image: "/advisory-board/Amishi.png",
+    image: "/advisory-board/abhijeet-singh.jpeg",
     bio: `Dear AMIMUN Family,
 
 The essence of AMIMUN has always extended beyond its committees and debates. It lives in the collective spirit of cooperation, respect, and curiosity that each one of you brings to this conference. Every edition reminds us that diplomacy does not begin on global stages — it begins here, in these rooms, with your willingness to speak, listen, and work toward shared understanding.
@@ -79,7 +79,7 @@ As emerging leaders and thoughtful changemakers, your presence at AMIMUN'27 carr
 Carry forward the camaraderie, the learning, and the spirit of AMIMUN wherever you go. You will find that this experience becomes a quiet but steady influence on the choices you make and the future you build.
 
 With Best Wishes,
-Amishi Arora`,
+Abhijeet Singh`,
   },
 ];
 
