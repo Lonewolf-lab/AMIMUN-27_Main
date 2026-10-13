@@ -101,8 +101,8 @@ export function Preloader() {
             <div
               key={index}
               className={`${styles.ringScaler} ${ringsIn ? styles.ringScalerIn : ""}`}
-              style={{ 
-                width: svgSize, 
+              style={{
+                width: svgSize,
                 height: svgSize,
                 animationDelay: entranceDelay,
               }}

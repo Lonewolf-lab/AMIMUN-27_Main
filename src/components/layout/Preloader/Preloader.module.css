@@ -4,7 +4,7 @@
    Preloader — Two-phase animation
    Phase 1: Dark → Sharp ignition of logo
    Phase 2: Bold AMIMUN'27 text rings spin in from outside
-   
+
    ARCHITECTURE (no-glitch):
    - .ringScaler  → ONLY handles scale(4→1) entrance via keyframe
    - SVG internal → ONLY handles rotation via <animateTransform>
@@ -134,7 +134,7 @@
   overflow: hidden;
 }
 
-/* ─── Ring Scaler (ONLY handles scale entrance) ──────────── 
+/* ─── Ring Scaler (ONLY handles scale entrance) ────────────
    Centered at exact screen center via translate(-50%, -50%).
    Keyframe maintains translate(-50%, -50%) throughout scale(5) -> scale(1).
    ─────────────────────────────────────────────────────────── */
